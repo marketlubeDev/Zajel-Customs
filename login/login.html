@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/typo.css" />
+    <link rel="stylesheet" href="../assets/css/buttons.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="login-box-content">
+          <div class="logo-header">
+            <img src="../assets/images/Logo.svg" alt="logo" />
+            <div class="logo-header-lan">H</div>
+          </div>
+          <div class="login-form-container">
+            <div class="login-form-contents">
+              <h1 class="normal">Welcome to</h1>
+              <h2 class="fancy">Dubai Customs Portal</h2>
+
+              <form class="login-form" action="#" method="post" novalidate>
+                <div class="form-input-group">
+                  <div class="form-group">
+                    <label class="form-label" for="username">Username</label>
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      class="form-input"
+                      placeholder="e.g. john.doe"
+                      autocomplete="username"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-input"
+                      autocomplete="current-password"
+                    />
+                  </div>
+
+                  <div class="form-row options-row">
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="remember"
+                        name="remember"
+                        checked
+                      />
+                      <span class="custom-checkbox" aria-hidden="true"></span>
+                      <span class="txt-small">Keep me signed in</span>
+                    </label>
+                    <a href="#" class="txt-small">Forgot password?</a>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn gradient-btn">Login</button>
+                <div class="register-now">
+                  <span class="txt-small">Don't have an account?</span>
+                  <a href="#" class="txt-small">Register Now</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-image">
+        <img src="../assets/images/Login_illustration.svg" alt="login-image" />
+        <h2 class="login-image-txt">
+          <span class="txt-large login-img-txt"
+            >One Portal for All Customs Documents</span
+          >
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>

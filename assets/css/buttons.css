@@ -1,0 +1,19 @@
+.btn {
+  border: none;
+  border-radius: 6px;
+}
+.gradient-btn {
+  margin-top: 0.5rem;
+  height: 48px;
+  background: radial-gradient(
+    95.47% 95.47% at 62.5% 93.18%,
+    #5192e2 3.89%,
+    #164b7d 100%
+  );
+  color: #fff;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
