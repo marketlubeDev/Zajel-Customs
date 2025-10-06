@@ -136,20 +136,11 @@ body {
   transform: rotate(45deg);
 }
 
-.login-btn {
-  margin-top: 0.5rem;
-  height: 48px;
-  border-radius: 6px;
-  background: #164b7d;
-  color: #fff;
-  font-family: Inter;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
 .register-now {
   margin: 0 auto;
+}
+.register-now .txt-small {
+  font-weight: 500;
 }
 .register-now a {
   color: #1f60b0;
@@ -165,7 +156,34 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
+}
+.login-image-bg {
+  background: url("../images/Bg_pattern.svg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+}
+.login-image img {
+  z-index: 5;
+}
+.login-img-txt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #164b7d;
+  position: relative;
+}
+.login-img-txt-container span {
+  width: 75%;
+  text-align: center;
+  color: #164b7d;
+  line-height: 1.5;
+  opacity: 0.8;
 }
 .login-img-txt {
-  color: #164b7d;
+  margin: 0;
 }
