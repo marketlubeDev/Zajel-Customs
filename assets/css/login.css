@@ -120,9 +120,9 @@
 .register-now {
   margin: 0 auto;
 }
-.register-now .txt-small {
+/* .register-now .txt-small {
   font-weight: 500;
-}
+} */
 .register-now a {
   color: var(--primary-blue-light);
 }
