@@ -1,0 +1,54 @@
+.btn {
+  border: none;
+  border-radius: 6px;
+}
+.gradient-btn {
+  margin-top: 0.5rem;
+  height: 48px;
+  background: radial-gradient(
+    95.47% 95.47% at 62.5% 93.18%,
+    var(--primary-blue-gradient-start) 3.89%,
+    var(--primary-blue) 100%
+  );
+  color: var(--bg-white);
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.back-btn {
+  background-color: transparent;
+  color: var(--primary-blue);
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.back-btn svg {
+  display: block;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+.form-input {
+  height: 48px;
+  padding: 8px 8px 8px 16px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(0, 38, 86, 0.2);
+  background: transparent;
+  font-family: Inter;
+  font-size: 1rem;
+}
+.form-input::placeholder {
+  color: var(--place-holder);
+  font-size: 0.8rem;
+}

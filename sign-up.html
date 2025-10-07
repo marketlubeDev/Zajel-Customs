@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typo.css" />
+    <link rel="stylesheet" href="../assets/css/base/buttons.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="../assets/css/sign-up.css" />
+    <link rel="stylesheet" href="./assets/css/components/progress.css" />
+    <link rel="stylesheet" href="./assets/css/components/components.css" />
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="signup-box">
+        <div class="signup-box-content">
+          <div class="signup-header">
+            <img src="../assets/images/Logo.svg" alt="logo" />
+          </div>
+          <!-- first form container -->
+          <div class="signup-form-container remove">
+            <div class="signup-form-header">
+              <button
+                class="btn back-btn hidden"
+                aria-label="Go back"
+                onclick="if (history.length > 1) { history.back(); } else { window.location.href='login.html'; }"
+              >
+                <svg
+                  width="6"
+                  height="12"
+                  viewBox="0 0 6 12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 1 L1 6 L5 11"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Back
+              </button>
+              <div class="signup-form-header-txt">
+                <h2 class="txt-xlarge">Create Account</h2>
+                <span class="txt-mid">Set up a new account to get started</span>
+              </div>
+              <div class="signup-progress">
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+                <span class="thin-line"></span>
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+                <span class="thin-line"></span>
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+              </div>
+              <div class="signup-progress-txt">
+                <div>
+                  <div class="txt-small">Step 1</div>
+                  <div class="form-label">Account Setup</div>
+                </div>
+                <div style="text-align: center">
+                  <div class="txt-small">Step 2</div>
+                  <div class="form-label">Company & Address</div>
+                </div>
+                <div style="text-align: right">
+                  <div class="txt-small">Step 3</div>
+                  <div class="form-label">Business info</div>
+                </div>
+              </div>
+            </div>
+            <div class="signup-form-group">
+              <div class="signup-form-input-group">
+                <label class="form-label" for="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  class="form-input"
+                  placeholder="e.g. John"
+                  autocomplete="first-name"
+                />
+              </div>
+              <div class="signup-form-input-group">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  class="form-input"
+                  placeholder="e.g. Doe"
+                  autocomplete="last-name"
+                />
+              </div>
+              <div class="signup-form-input-group">
+                <label class="form-label" for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="form-input"
+                  placeholder="e.g. john.doe"
+                  autocomplete="username"
+                />
+              </div>
+              <div class="signup-form-input-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="e.g. john.doe@example.com"
+                  autocomplete="email"
+                />
+              </div>
+              <div class="signup-form-input-group">
+                <label class="form-label" for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-input"
+                  placeholder="Minimum 8 characters"
+                  autocomplete="password"
+                />
+              </div>
+              <div class="signup-form-input-group">
+                <label class="form-label" for="password"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  class="form-input"
+                  placeholder="Re-enter your password"
+                  autocomplete="confirm-password"
+                />
+              </div>
+            </div>
+            <div class="signup-from-action">
+              <button type="submit" class="btn gradient-btn">Continue</button>
+              <div class="register-now">
+                <span class="txt-small">Already have an account?</span>
+                <a href="#" class="txt-small">Sign in</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- second form container -->
+          <div class="signup-form-container">
+            <div class="signup-form-header">
+              <button
+                class="btn back-btn"
+                aria-label="Go back"
+                onclick="if (history.length > 1) { history.back(); } else { window.location.href='login.html'; }"
+              >
+                <svg
+                  width="6"
+                  height="12"
+                  viewBox="0 0 6 12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 1 L1 6 L5 11"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Back
+              </button>
+              <div class="signup-form-header-txt">
+                <h2 class="txt-xlarge">Create Account</h2>
+                <span class="txt-mid">Set up a new account to get started</span>
+              </div>
+              <div class="signup-progress">
+                <img src="./assets/icons/Stages1.svg" alt="signup-progress-1" />
+                <span class="line"></span>
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+                <span class="thin-line"></span>
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+              </div>
+              <div class="signup-progress-txt">
+                <div>
+                  <div class="txt-small">Step 1</div>
+                  <div class="form-label">Account Setup</div>
+                </div>
+                <div style="text-align: center">
+                  <div class="txt-small">Step 2</div>
+                  <div class="form-label">Company & Address</div>
+                </div>
+                <div style="text-align: right">
+                  <div class="txt-small">Step 3</div>
+                  <div class="form-label">Business info</div>
+                </div>
+              </div>
+            </div>
+            <div class="signup-form-group">
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="company-name"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  id="company-name"
+                  name="company-name"
+                  class="form-input"
+                  placeholder="e.g. Infra Technologies"
+                  autocomplete="Company Name"
+                />
+              </div>
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="contact">Contact Number</label>
+                <input
+                  type="text"
+                  id="contact-number"
+                  name="contact"
+                  class="form-input"
+                  placeholder="e.g. +91 6238533609"
+                  autocomplete="contact"
+                />
+              </div>
+              <div
+                class="signup-form-input-2-group"
+                style="grid-column: span 2"
+              >
+                <label class="form-label" for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  class="form-input"
+                  placeholder="e.g. Search or type your address"
+                  autocomplete="address"
+                />
+              </div>
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="city">City</label>
+                <input
+                  type="text"
+                  id="city-name"
+                  name="city"
+                  class="form-input"
+                  placeholder="e.g. john.doe"
+                  autocomplete="Company Name"
+                />
+              </div>
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="company-name"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  id="company-name"
+                  name="company-name"
+                  class="form-input"
+                  placeholder="e.g. john.doe"
+                  autocomplete="Company Name"
+                />
+              </div>
+            </div>
+            <div class="signup-from-action">
+              <button type="submit" class="btn gradient-btn">Continue</button>
+              <div class="register-now">
+                <span class="txt-small">Already have an account?</span>
+                <a href="#" class="txt-small">Sign in</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third form container -->
+          <div class="signup-form-container remove">
+            <div class="signup-form-header">
+              <button
+                class="btn back-btn"
+                aria-label="Go back"
+                onclick="if (history.length > 1) { history.back(); } else { window.location.href='login.html'; }"
+              >
+                <svg
+                  width="6"
+                  height="12"
+                  viewBox="0 0 6 12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 1 L1 6 L5 11"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Back
+              </button>
+              <div class="signup-form-header-txt">
+                <h2 class="txt-xlarge">Create Account</h2>
+                <span class="txt-mid">Set up a new account to get started</span>
+              </div>
+              <div class="signup-progress">
+                <img src="./assets/icons/Stages1.svg" alt="signup-progress-1" />
+                <span class="line"></span>
+                <img src="./assets/icons/Stages1.svg" alt="signup-progress-1" />
+                <span class="line"></span>
+                <img src="./assets/icons/Stages2.svg" alt="signup-progress-1" />
+              </div>
+              <div class="signup-progress-txt">
+                <div>
+                  <div class="txt-small">Step 1</div>
+                  <div class="form-label">Account Setup</div>
+                </div>
+                <div style="text-align: center">
+                  <div class="txt-small">Step 2</div>
+                  <div class="form-label">Company & Address</div>
+                </div>
+                <div style="text-align: right">
+                  <div class="txt-small">Step 3</div>
+                  <div class="form-label">Business info</div>
+                </div>
+              </div>
+            </div>
+            <div class="signup-form-group">
+              <div class="signup-form-input-2-group full-row">
+                <label class="form-label" for="tri-number">TRI number</label>
+                <input
+                  type="text"
+                  id="tri-number"
+                  name="tri-number"
+                  class="form-input"
+                  placeholder="e.g., 100123456700003"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="trade-license"
+                  >Trade license</label
+                >
+                <div
+                  class="upload-dropzone"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Upload Trade license"
+                  data-for="trade-license"
+                >
+                  <div class="upload-content">
+                    <div class="icon-circle">
+                      <img
+                        src="./assets/figma/ac3a402e55e14d49676a2874aa557f1da0b0fd3b.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div class="upload-title">Upload Trade license</div>
+                    <div class="upload-subtitle">
+                      PDF, JPG, or PNG (max 5MB)
+                    </div>
+                  </div>
+                  <input
+                    id="trade-license"
+                    name="trade-license"
+                    type="file"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                </div>
+              </div>
+
+              <div class="signup-form-input-2-group">
+                <label class="form-label" for="vat-certificate"
+                  >VAT Certificate</label
+                >
+                <div
+                  class="upload-dropzone"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Upload VAT Certificate"
+                  data-for="vat-certificate"
+                >
+                  <div class="upload-content">
+                    <div class="icon-circle">
+                      <img
+                        src="./assets/figma/ac3a402e55e14d49676a2874aa557f1da0b0fd3b.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div class="upload-title">Upload VAT Certificate</div>
+                    <div class="upload-subtitle">
+                      PDF, JPG, or PNG (max 5MB)
+                    </div>
+                  </div>
+                  <input
+                    id="vat-certificate"
+                    name="vat-certificate"
+                    type="file"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="signup-from-action">
+              <button type="submit" class="btn gradient-btn">
+                Create account
+              </button>
+              <div class="register-now">
+                <span class="txt-small">Already have an account?</span>
+                <a href="#" class="txt-small">Sign in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-image">
+        <div class="login-image-bg"></div>
+        <img src="../assets/images/Login_illustration.svg" alt="login-image" />
+        <div class="login-img-txt-container">
+          <h2 class="login-image-txt">
+            <span class="txt-large login-img-txt"
+              >One Portal for All Customs Documents</span
+            >
+          </h2>
+          <span class="txt-small" style="font-size: 1rem"
+            >Fast, secure clearance for your shipments via Dubai Customs</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+  <script defer src="./assets/js/signup.js"></script>
+</html>

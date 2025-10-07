@@ -1,28 +1,15 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-  background-color: #e7e7f0;
-  height: 100vh;
-  width: 100vw;
-  padding: 3rem 8rem;
-}
 .login-container {
   height: 100%;
-  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .login-box {
-  /* background-color: rgb(220, 255, 220); */
   height: 100%;
   width: 100%;
 }
 .login-box-content {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-white);
   height: 100%;
   width: 80%;
   border-radius: 1rem;
@@ -30,10 +17,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 3rem;
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
 }
 .logo-header {
-  /* background-color: green; */
-  /* height: 5rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +28,6 @@ body {
   opacity: 0;
 }
 .login-form-container {
-  /* background-color: rgb(201, 201, 201); */
   height: 100%;
   width: 100%;
   flex: 1;
@@ -57,17 +42,13 @@ body {
 
 /* Form styles (match Figma) */
 .login-form {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 3.5rem 0;
-  /* background-color: red;
-  height: 100%; */
 }
 .form-input-group {
   flex: 1;
-  /* background-color: yellow; */
   margin-bottom: 3.5rem;
   display: flex;
   align-items: stretch;
@@ -82,7 +63,7 @@ body {
 }
 
 .form-group input::placeholder {
-  color: rgba(20, 20, 20, 0.6);
+  color: var(--place-holder);
   font-size: 0.8rem;
 }
 
@@ -119,7 +100,7 @@ body {
   content: "";
   position: absolute;
   inset: 2px;
-  background: #164b7d;
+  background: var(--primary-blue);
   border-radius: 4px;
 }
 
@@ -130,7 +111,7 @@ body {
   right: 27.35%;
   top: 34.85%;
   bottom: 32.2%;
-  border: 2px solid #fff;
+  border: 2px solid var(--bg-white);
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg);
@@ -143,12 +124,11 @@ body {
   font-weight: 500;
 }
 .register-now a {
-  color: #1f60b0;
+  color: var(--primary-blue-light);
 }
 /* login right section started */
 
 .login-image {
-  /* background-color: rgb(255, 222, 222); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -174,15 +154,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  color: #164b7d;
+  color: var(--primary-blue);
   position: relative;
 }
 .login-img-txt-container span {
   width: 75%;
   text-align: center;
-  color: #164b7d;
+  color: var(--primary-blue);
   line-height: 1.5;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .login-img-txt {
   margin: 0;

@@ -1,0 +1,12 @@
+:root {
+  /* Primary Colors */
+  --primary-blue: #164b7d;
+  --primary-blue-light: #1f60b0;
+  --primary-blue-gradient-start: #5192e2;
+  --primary-blue-gradient-end: #164b7d;
+
+  --bg-primary: #e7e7f0;
+  --bg-white: #ffffff;
+  --bg-black: #000000;
+  --place-holder: rgba(20, 20, 20, 0.6);
+}
