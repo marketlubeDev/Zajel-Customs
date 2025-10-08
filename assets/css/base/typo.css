@@ -62,3 +62,25 @@
   line-height: normal;
   text-wrap: nowrap;
 }
+@media (max-width: 600px) {
+  .fancy {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .normal {
+    font-size: 1.25rem;
+  }
+  .txt-large {
+    font-size: 1.2rem;
+  }
+  .txt-xlarge {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+  .txt-mid {
+    font-size: 0.8rem;
+  }
+  .form-label {
+    font-size: 0.8rem;
+  }
+}

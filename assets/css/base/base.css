@@ -9,4 +9,10 @@ body {
   width: 100vw;
   padding: 3rem 8rem;
   font-family: "Inter";
+  overflow-x: hidden; /* avoid x-axis overflow across pages */
+}
+@media (max-width: 600px) {
+  body {
+    background-color: var(--color-white);
+  }
 }

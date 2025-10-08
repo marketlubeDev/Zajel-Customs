@@ -52,3 +52,11 @@
   color: var(--place-holder);
   font-size: 0.8rem;
 }
+@media (max-width: 600px) {
+  .gradient-btn {
+    height: 2.5rem;
+  }
+  .back-btn {
+    display: none;
+  }
+}
