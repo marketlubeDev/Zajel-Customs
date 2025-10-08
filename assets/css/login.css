@@ -92,6 +92,10 @@
 .register-now a {
   color: var(--primary-blue-light);
 }
+/* Ensure bottom content like Register Now is never clipped by the card radius */
+.login-box-content {
+  padding-bottom: 2rem;
+}
 /* login right section started */
 
 .login-image {
@@ -209,6 +213,10 @@
     padding: 0rem;
     background-color: var(--color-white);
   }
+  /* Add safe bottom space so Register Now is always visible on phones */
+  .login-box-content {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
   .login-form {
     margin-top: 2rem;
     gap: 0.5rem;
@@ -257,7 +265,10 @@
 /* Targeted iPad Pro landscape adjustments without conflicting with main breakpoints */
 @media (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape) {
   .login-box-content {
-    width: 100%;
+    width: 90%;
+  }
+  body {
+    padding: 2rem;
   }
 }
 
