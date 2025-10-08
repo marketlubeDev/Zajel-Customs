@@ -257,7 +257,7 @@
 /* Targeted iPad Pro landscape adjustments without conflicting with main breakpoints */
 @media (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape) {
   .login-box-content {
-    flex-direction: row;
+    width: 100%;
   }
 }
 
