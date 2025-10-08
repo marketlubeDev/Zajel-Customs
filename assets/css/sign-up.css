@@ -49,6 +49,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
+  margin-top: 2rem; /* add desktop spacing below progress section */
   margin-bottom: 2rem;
   max-width: 100%;
 }
