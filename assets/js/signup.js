@@ -62,4 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Sync language code text with select value
+  const languageSelect = document.getElementById("language");
+  const languageCodeEl = document.querySelector(
+    ".language-select-wrapper .language-code"
+  );
+  if (languageSelect && languageCodeEl) {
+    const updateCode = () => {
+      const code = (languageSelect.value || "en").toUpperCase();
+      languageCodeEl.textContent = code === "AR" ? "AR" : "EN";
+    };
+    languageSelect.addEventListener("change", updateCode);
+    updateCode();
+  }
 });

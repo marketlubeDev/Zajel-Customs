@@ -266,6 +266,11 @@ body {
   .signup-header {
     margin-bottom: 1rem;
   }
+  /* Slightly reduce logo size on phones */
+  .signup-header img {
+    height: 32px;
+    width: auto;
+  }
   .signup-form-group {
     margin-bottom: 1rem;
     grid-template-columns: 1fr !important; /* force single column on phones */

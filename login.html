@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/base/typo.css" />
     <link rel="stylesheet" href="../assets/css/base/buttons.css" />
     <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="../assets/css/components/components.css" />
 
     <title>Login</title>
   </head>
@@ -17,7 +18,48 @@
         <div class="login-box-content">
           <header class="logo-header">
             <img src="../assets/images/Logo.svg" alt="logo" />
-            <div class="logo-header-lan">H</div>
+            <div class="language-select-wrapper" aria-label="Language selector">
+              <div class="language-display">
+                <span class="flag" aria-hidden="true">
+                  <img
+                    class="flag-layer flag-base"
+                    src="./assets/figma/fd3c6e26a9e1922e52b52e3aa0ddaf08148e5fdf.svg"
+                    alt=""
+                  />
+                  <img
+                    class="flag-layer flag-inner"
+                    src="./assets/figma/bb211c4351a2f2fc4ded1208b36332398bde2d3c.svg"
+                    alt=""
+                  />
+                  <img
+                    class="flag-layer flag-overlay"
+                    src="./assets/figma/da970b39a15bfdc7195657e6016fcdc4e62c1bf5.svg"
+                    alt=""
+                  />
+                </span>
+                <span class="language-code">EN</span>
+                <svg
+                  class="dropdown-icon"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 10l5 5 5-5"
+                    fill="none"
+                    stroke="#7C8089"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <select id="language" class="language-select">
+                <option value="en" selected>English</option>
+                <option value="ar">Arabic</option>
+              </select>
+            </div>
           </header>
           <div class="login-form-container">
             <div class="login-form-contents">
@@ -50,14 +92,13 @@
                   </div>
 
                   <div class="form-row options-row">
-                    <label class="checkbox">
+                    <label class="keep-signed-in" for="remember">
                       <input
                         type="checkbox"
                         id="remember"
                         name="remember"
                         checked
                       />
-                      <span class="custom-checkbox" aria-hidden="true"></span>
                       <span class="txt-small">Keep me signed in</span>
                     </label>
                     <a href="#" class="txt-small">Forgot password?</a>
