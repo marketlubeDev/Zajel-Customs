@@ -6,7 +6,11 @@
   --primary-blue-gradient-end: #164b7d;
 
   --bg-primary: #e7e7f0;
+
   --bg-white: #ffffff;
   --bg-black: #000000;
   --place-holder: rgba(20, 20, 20, 0.6);
+
+  --color-gray: #858c9a;
+  --color-gray-light: #ebedf0;
 }

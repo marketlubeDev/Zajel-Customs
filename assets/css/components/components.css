@@ -76,3 +76,30 @@
   -webkit-appearance: none;
   cursor: pointer;
 }
+.table-selector,
+.searchbar {
+  width: 19rem;
+  height: 2.7rem;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.table-selector {
+  width: fit-content;
+}
+.searchbar .search-item {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.table-selector select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
