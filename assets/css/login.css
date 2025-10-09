@@ -117,8 +117,9 @@
 }
 .login-image img {
   z-index: 5;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 70%;
+  object-fit: contain;
 }
 .login-img-txt-container {
   display: flex;
@@ -260,6 +261,19 @@
 
 @media (min-width: 1536px) {
   /* XL desktops */
+}
+
+/* Desktop: align login illustration behavior with sign-up (consistent position/height) */
+@media (min-width: 1024px) {
+  .login-container {
+    align-items: flex-start; /* avoid vertical centering when content height varies */
+  }
+  .login-container > .login-image {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh; /* match sign-up column height */
+  }
 }
 
 /* Targeted iPad Pro landscape adjustments without conflicting with main breakpoints */

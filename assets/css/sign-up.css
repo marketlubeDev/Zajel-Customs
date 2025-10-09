@@ -49,7 +49,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
-  margin-top: 2rem; /* add desktop spacing below progress section */
+  margin-top: 2rem;
   margin-bottom: 2rem;
   max-width: 100%;
 }
@@ -442,5 +442,18 @@ body {
   .signup-container .login-image img {
     width: 46%;
     max-width: 600px;
+  }
+}
+
+/* Sign-up page only: anchor right-side illustration without affecting other pages */
+@media (min-width: 1024px) {
+  .signup-container {
+    align-items: flex-start; /* prevent left column from being vertically centered */
+  }
+  .signup-container > aside.login-image {
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* ignore parent's center alignment to avoid jump */
+    height: 100vh; /* keep column steady across step height changes */
   }
 }
