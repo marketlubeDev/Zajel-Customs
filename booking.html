@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/booking-details.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -106,170 +110,464 @@
             <img src="../assets/icons/moon-line.svg" alt="" />
           </button>
         </header>
-        <!-- default section -->
-        <section class="booking-table">
-          <div class="table-filter-container">
-            <div class="table-filter">
-              <!-- search bar -->
-              <div class="form-input searchbar">
-                <img src="../assets/icons/Search Icon.svg" alt="search" />
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  class="search-item"
-                  placeholder="Search..."
-                  autocomplete="address"
-                />
-              </div>
-              <!-- filter one -->
-              <div class="form-input table-selector">
-                <select value="All Status">
-                  <option>All Status</option>
-                  <option>Pending</option>
-                  <option>In Progress</option>
-                  <option>Completed</option>
-                  <option>Cancelled</option>
-                </select>
-              </div>
-              <!-- filter two -->
-              <div class="form-input table-selector">
-                <select value="All Type">
-                  <option>All Type</option>
-                  <option>Pending</option>
-                  <option>In Progress</option>
-                  <option>Completed</option>
-                  <option>Cancelled</option>
-                </select>
-              </div>
-            </div>
-            <div class="table-filter-right">
-              <button class="btn export-btn">
-                <img src="./assets/icons/export-icon.svg" />
-                Export as PDF
-              </button>
 
-              <button class="btn gradient-btn">New Booking</button>
+        <section class="booking-details">
+          <div class="booking-scrollable">
+            <!-- first box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Shipping Details</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="table">
-            <div class="table-head">
-              <div class="txt-small width">
-                <span>AWB ID</span>
+            <!-- second box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Shipper Info</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="txt-small width">
-                <span>Shipment</span>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="txt-small width">
-                <span>Shipper</span>
-              </div>
-              <div class="txt-small width">
-                <span>Consegnee</span>
-              </div>
-              <div class="txt-small width">
-                <span>Route</span>
-              </div>
-              <div class="txt-small width">
-                <span>Status</span>
-              </div>
-              <div class="txt-small width">
-                <span>Payment</span>
-              </div>
-              <div class="txt-small width">
-                <span>Cost</span>
-              </div>
-              <div class="txt-small width hidden">
-                <span>Cost</span>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- table body -->
-            <div class="table-body">
-              <div class="table-body-row">
-                <div class="table-body-row-cell">
-                  <span>ZFZ25091000002</span>
+            <!-- second box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Cosengee info</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
                 </div>
-                <div class="table-body-row-cell">
-                  <div>Document</div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
                 </div>
-                <div class="table-body-row-cell">
-                  <span>Sufiyan</span>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
                 </div>
-                <div class="table-body-row-cell">
-                  <span>Dubai Customs</span>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
                 </div>
-                <div class="table-body-row-cell">
-                  <span>Drafted</span>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
                 </div>
-                <div class="table-body-row-cell">
-                  <span>Drafted</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <span>Pending</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <span>AED 23.10</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <img src="./assets/icons/pencil.svg" />
-                  <img src="./assets/icons/three-dot.svg" />
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="table-pagination"
-            data-name="Title"
-            data-node-id="2108:18962"
-          >
-            <div class="pagination-left hidden">
-              <span class="txt-low-mid">Rows per page</span>
-              <div
-                class="rows-per-page"
-                data-name="Rows Per Page Dropdown"
-                data-node-id="2108:18965"
-              >
-                <select aria-label="Rows per page">
-                  <option selected>9</option>
-                  <option>10</option>
-                  <option>20</option>
-                  <option>50</option>
-                </select>
-                <span class="chevron" aria-hidden="true"></span>
-              </div>
-            </div>
+            <!-- Action Bar from Figma -->
             <div
-              class="pagination-right"
-              data-name="Pagination Controls"
-              data-node-id="2108:18969"
+              class="booking-action-bar"
+              data-name="Title"
+              data-node-id="1878:16183"
             >
-              <div
-                class="showing"
-                data-name="Showing Text"
-                data-node-id="2108:18970"
-              >
-                <span class="txt-low-mid">Showing</span>
-                <span
-                  class="page-chip"
-                  data-name="Current Page Number"
-                  data-node-id="2108:18972"
-                  >1</span
-                >
-                <span class="txt-low-mid">of 20 pages</span>
-              </div>
-              <div
-                class="page-nav"
-                data-name="Page Navigation"
-                data-node-id="2108:18975"
-              >
+              <button class="cancel-link" aria-label="Cancel changes">
+                <span class="cancel-icon" aria-hidden="true">×</span>
+                Cancel
+              </button>
+              <div class="action-right">
+                <button class="btn outline-btn" aria-label="Save changes">
+                  Save changes
+                </button>
                 <button
-                  class="nav-arrow prev"
-                  aria-label="Previous page"
-                ></button>
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">4</button>
-                <button class="nav-arrow next" aria-label="Next page"></button>
+                  class="btn gradient-btn paynow-btn"
+                  aria-label="Pay now"
+                >
+                  Pay now
+                </button>
               </div>
             </div>
           </div>

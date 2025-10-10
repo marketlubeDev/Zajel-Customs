@@ -1,6 +1,7 @@
 .btn {
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 .gradient-btn {
   margin-top: 0.5rem;

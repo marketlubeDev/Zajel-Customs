@@ -18,7 +18,6 @@ body {
 }
 .main-header {
   height: fit-content;
-  /* background-color: yellow; */
   padding: 1.5rem;
   border-bottom: 0.8px solid lightgray;
   display: flex;
