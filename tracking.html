@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track shipment</title>
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typo.css" />
+    <link rel="stylesheet" href="../assets/css/base/buttons.css" />
+    <link rel="stylesheet" href="../assets/css/booking.css" />
+    <link rel="stylesheet" href="../assets/css/components/components.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/table.css" />
+    
+    <link rel="stylesheet" href="../assets/css/tracking.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="sidebar-top">
+          <img src="../assets/images/Logo.svg" alt="logo" />
+        </div>
+        <div
+          class="sidebar-mid"
+          data-name="Sidebar Items [Sidebar] [1.0]"
+          data-node-id="1878:13648"
+        >
+          <div class="sidebar-mid-top">
+            <h4>Main Menu</h4>
+            <a class="sidebar-item" href="#">
+              <img
+                src="../assets/icons/booking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-mid">Booking</span>
+            </a>
+            <a class="sidebar-item nav-effect" href="#">
+              <img
+                src="../assets/icons/tracking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-mid">Tracking</span>
+            </a>
+            <a class="sidebar-item" href="#">
+              <img
+                src="../assets/icons/save-address.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-mid">Saved address</span>
+            </a>
+          </div>
+          <a href="#" class="sidebar-mid-bottom">
+            <img
+              src="../assets/images/Promo Section.png"
+              alt=""
+              class="sidebar-item__icon"
+            />
+          </a>
+        </div>
+        <div class="sidebar-bottom">
+          <div
+            class="profile-card"
+            data-name="User Profile Card [Sidebar] [1.0]"
+            data-node-id="1878:13663"
+          >
+            <div class="profile-user">
+              <div class="profile-avatar" data-name="Avatar [1.0]">
+                <img
+                  src="../assets/417942d6127e1fbb599aef872e60492af4afa107.png"
+                  alt=""
+                />
+              </div>
+              <div class="profile-text">
+                <div class="profile-name-row">
+                  <span class="form-label">Arthur Taylor</span>
+                  <img
+                    class="profile-verified"
+                    src="../assets/e2950f05c4b6e0c4175c2455ef91f1f9ab2ac466.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="txt-small">arthur@zajelnow.com</span>
+              </div>
+            </div>
+            <button class="profile-compact-btn" aria-label="Open profile menu">
+              <img
+                src="../assets/cfea062004ae840ffe59aecffeb334c7024b18d7.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <header class="main-header">
+          <div>
+            <h2 class="txt-large">Track shipment</h2>
+            <span class="txt-low-mid"
+              >Track your package in real time with just your AWB number</span
+            >
+          </div>
+         <div class="tracking-header-actions">
+          <button class="moon-line">
+            <img src="../assets/icons/moon-line.svg" alt="" />
+          </button>
+          <button class="moon-line" aria-label="More options">
+            <img src="../assets/icons/three-dot.svg" alt="" />
+          </button>
+         </div>
+        </header>
+
+        <section class="tracking-details">
+          <div class="tracking-scrollable">
+            <div class="tracking-box tracking-controls">
+              <div class="tracking-box-body tracking-controls-body">
+                <label class="form-label" for="awb-input">Enter your AWB number</label>
+                <div class="tracking-box-body-content tracking-row">
+                  <div class="tracking-input-wrap">
+                    <span class="tracking-search-icon">
+                      <img src="../assets/icons/Search Icon.svg" alt="" />
+                    </span>
+                    <input
+                      type="text"
+                      id="awb-input"
+                      name="awb"
+                      class="form-input tracking-input"
+                      placeholder="Enter your AWB number"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <button class="btn gradient-btn tracking-btn" aria-label="Track shipment">Track shipment</button>
+                </div>
+              </div>
+              <div class="tracking-divider"></div>
+            </div>
+
+            <div class="tracking-box tracking-empty">
+              <div class="tracking-empty-inner">
+                <img src="../assets/images/tracking.png" alt="empty-state" class="tracking-empty-img" />
+                <p class="txt-low-mid tracking-empty-text">
+                  Enter your AWB number to view the latest <br>
+                  status and complete delivery timeline.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
