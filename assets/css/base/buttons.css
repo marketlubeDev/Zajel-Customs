@@ -33,6 +33,11 @@
   gap: 8px;
   padding: 8px 0;
 }
+.back-btn-left {
+  height: 100%;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
 
 .back-btn svg {
   display: block;

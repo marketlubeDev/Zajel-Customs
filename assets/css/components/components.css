@@ -1,5 +1,5 @@
 .remove {
-  display: none;
+  display: none !important;
 }
 .hidden {
   opacity: 0;
