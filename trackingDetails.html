@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Track shipment</title>
+    <title>Track shipment details</title>
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../assets/css/base/variables.css" />
     <link rel="stylesheet" href="../assets/css/base/typo.css" />
@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
+    <link rel="stylesheet" href="../assets/css/components/progress.css" />
     
-    <link rel="stylesheet" href="../assets/css/tracking.css" />
+    <link rel="stylesheet" href="../assets/css/trackingDetails.css" />
   </head>
   <body>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -148,13 +149,120 @@
               <div class="tracking-divider"></div>
             </div>
 
-            <div class="tracking-box tracking-empty">
-              <div class="tracking-empty-inner">
-                <img src="../assets/images/tracking.png" alt="empty-state" class="tracking-empty-img" />
-                <p class="txt-low-mid tracking-empty-text">
-                  Enter your AWB number to view the latest <br>
-                  status and complete delivery timeline.
-                </p>
+            <div class="tracking-box tracking-results">
+              <!-- Status Header -->
+              <div class="tracking-status-header">
+             
+                  <div class="status-info">
+                    <span class="status-label">Current status</span>
+                    <h3 class="status-title">Arrived at destination hub</h3>
+                    <span class="status-date">Last updated on 22 Sep 2025, Friday</span>
+                  </div>
+     
+          
+                  <div class="status-awb">
+                    <span class="status-label">AWB</span>
+                    <span class="awb-number">ET00000000</span>
+                  </div>
+                  <div class="status-delivery">
+                    <span class="delivery-label">Estimated delivery</span>
+                    <span class="delivery-date">20 Sep 2025</span>
+                  </div>
+          
+              </div>
+
+              <!-- Desktop Timeline -->
+     <div class="timeline-desktop">
+      <div class="signup-progress">
+        <img src="../assets/icons/Stages1.svg" alt="Completed" />
+        <span class="line"></span>
+        <img src="../assets/icons/Stages1.svg" alt="Completed" />
+        <span class="line"></span>
+        <img src="../assets/icons/Stages1.svg" alt="Completed" />
+        <span class="thin-line"></span>
+        <img src="../assets/icons/Stages2.svg" alt="Pending" />
+        <span class="thin-line"></span>
+        <img src="../assets/icons/Stages2.svg" alt="Pending" />
+      </div>
+      <div class="signup-progress-txt">
+        <div>
+          <span class="timeline-title">Pickup completed</span>
+          <span class="timeline-location">At Dubai, UAE</span>
+          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+        </div>
+        <div style="text-align: center">
+          <span class="timeline-title">Pickup completed</span>
+          <span class="timeline-location">At Dubai, UAE</span>
+          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+        </div>
+        <div style="text-align: center">
+          <span class="timeline-title">Pickup completed</span>
+          <span class="timeline-location">At Dubai, UAE</span>
+          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+        </div>
+        <div style="text-align: center">
+          <span class="timeline-title">Pickup completed</span>
+          <span class="timeline-location">At Dubai, UAE</span>
+          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+        </div>
+        <div style="text-align: right">
+          <span class="timeline-title">Pickup completed</span>
+          <span class="timeline-location">At Dubai, UAE</span>
+          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+        </div>
+      </div>
+     </div>
+
+              <!-- Mobile Timeline -->
+              <div class="timeline-vertical">
+                <div class="timeline-item-v completed">
+                  <div class="timeline-marker-v">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                      <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="timeline-content-v">
+                    <span class="timeline-title-v">In transit</span>
+                    <span class="timeline-desc-v">Departed from Frankfurt</span>
+                    <span class="timeline-time-v">18 Sep 2025, 03:15 PM</span>
+                  </div>
+                </div>
+                <div class="timeline-item-v completed">
+                  <div class="timeline-marker-v">
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                      <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="timeline-content-v">
+                    <span class="timeline-title-v">Arrival at destination</span>
+                    <span class="timeline-desc-v">Arrived in New York, USA</span>
+                    <span class="timeline-time-v">18 Sep 2025, 11:30 AM</span>
+                  </div>
+                </div>
+                <div class="timeline-item-v pending">
+                  <div class="timeline-marker-v"></div>
+                  <div class="timeline-content-v">
+                    <span class="timeline-title-v">Departure confirmed</span>
+                    <span class="timeline-desc-v">Leaving Frankfurt for New York</span>
+                    <span class="timeline-time-v">Estimated: 18 Sep 2025</span>
+                  </div>
+                </div>
+                <div class="timeline-item-v pending">
+                  <div class="timeline-marker-v"></div>
+                  <div class="timeline-content-v">
+                    <span class="timeline-title-v">Out for delivery</span>
+                    <span class="timeline-desc-v">On the way to final address</span>
+                    <span class="timeline-time-v">Estimated: 19 Sep 2025</span>
+                  </div>
+                </div>
+                <div class="timeline-item-v pending">
+                  <div class="timeline-marker-v"></div>
+                  <div class="timeline-content-v">
+                    <span class="timeline-title-v">Customs clearance</span>
+                    <span class="timeline-desc-v">In process at Frankfurt</span>
+                    <span class="timeline-time-v">Estimated: 20 Sep 2025</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
