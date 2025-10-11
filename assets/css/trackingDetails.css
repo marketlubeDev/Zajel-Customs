@@ -1,6 +1,6 @@
 body {
   padding: 1rem;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 0;
     overflow: hidden;
     position: fixed;
@@ -457,7 +457,7 @@ body {
 }
 
 /* Mobile Specific Layout */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .main {
     width: 100%;
   }

@@ -152,6 +152,90 @@
 } */
 
 /* ============================================ */
+/* Tablet/Small Desktop Responsive (1025px - 1440px) */
+/* ============================================ */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .sidebar {
+    width: 240px;
+    padding: 0.75rem 0;
+    gap: 0.75rem;
+  }
+
+  .sidebar-top {
+    height: 4rem;
+  }
+
+  .sidebar-top img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .sidebar-mid {
+    padding: 0 0.75rem;
+  }
+
+  .sidebar-mid-top {
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .sidebar-mid h4 {
+    padding: 8px 6px 8px 0.75rem;
+    font-size: 13px;
+  }
+
+  .sidebar-item {
+    padding: 8px 6px 8px 10px;
+    gap: 6px;
+  }
+
+  .sidebar-item__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar-item .txt-mid {
+    font-size: 14px;
+  }
+
+  .sidebar-mid-bottom {
+    padding: 0.75rem;
+  }
+
+  .sidebar-bottom {
+    height: 7rem;
+    padding: 1.5rem;
+  }
+
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-text {
+    gap: 2px;
+  }
+
+  .profile-name-row {
+    gap: 6px;
+  }
+
+  .profile-name-row .form-label {
+    font-size: 13px;
+  }
+
+  .profile-text .txt-small {
+    font-size: 11px;
+  }
+
+  .profile-verified {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ============================================ */
 /* Mobile Menu Toggle Styles */
 /* ============================================ */
 
@@ -188,7 +272,7 @@
 }
 
 /* Mobile Sidebar Toggle */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mobile-menu-toggle {
     display: block;
     position: absolute;
