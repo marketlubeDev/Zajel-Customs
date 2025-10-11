@@ -99,19 +99,199 @@
       </nav>
       <main class="main">
         <header class="main-header">
-          <div>
-            <h2 class="txt-large">ZFZE Bookings</h2>
-            <span class="txt-low-mid"
-              >View and track your shipments currently under customs
-              clearance</span
-            >
+          <div class="main-header-left">
+            <div class="back-btn-left remove">
+              <img src="./assets/icons/back.svg" />
+            </div>
+            <div class="nav-btn">
+              <img src="./assets/icons/notification-mobile.svg" />
+            </div>
+            <div>
+              <h2 class="txt-large">ZFZE Bookings</h2>
+              <span class="nav-txt-low txt-low-mid"
+                >View and track your shipments currently under customs
+                clearance</span
+              >
+            </div>
           </div>
           <button class="moon-line">
             <img src="../assets/icons/moon-line.svg" alt="" />
           </button>
         </header>
 
-        <section class="booking-details">
+        <!-- default section -->
+        <section class="booking-table">
+          <div class="table-filter-container">
+            <div class="table-filter">
+              <!-- search bar -->
+              <div class="form-input searchbar">
+                <img src="../assets/icons/Search Icon.svg" alt="search" />
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  class="search-item"
+                  placeholder="Search..."
+                  autocomplete="address"
+                />
+              </div>
+              <!-- filter one -->
+              <div class="form-input table-selector">
+                <select value="All Status">
+                  <option>All Status</option>
+                  <option>Pending</option>
+                  <option>In Progress</option>
+                  <option>Completed</option>
+                  <option>Cancelled</option>
+                </select>
+              </div>
+              <!-- filter two -->
+              <div class="form-input table-selector">
+                <select value="All Type">
+                  <option>All Type</option>
+                  <option>Pending</option>
+                  <option>In Progress</option>
+                  <option>Completed</option>
+                  <option>Cancelled</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-filter-right">
+              <button class="btn export-btn">
+                <img src="./assets/icons/export-icon.svg" />
+                Export as PDF
+              </button>
+
+              <button class="btn gradient-btn">New Booking</button>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table-head">
+              <div class="txt-small width">
+                <span>AWB ID</span>
+              </div>
+              <div class="txt-small width">
+                <span>Shipment</span>
+              </div>
+              <div class="txt-small width">
+                <span>Shipper</span>
+              </div>
+              <div class="txt-small width">
+                <span>Consegnee</span>
+              </div>
+              <div class="txt-small width">
+                <span>Route</span>
+              </div>
+              <div class="txt-small width">
+                <span>Status</span>
+              </div>
+              <div class="txt-small width">
+                <span>Payment</span>
+              </div>
+              <div class="txt-small width">
+                <span>Cost</span>
+              </div>
+              <div class="txt-small width hidden">
+                <span>Cost</span>
+              </div>
+            </div>
+            <!-- table body -->
+            <div class="table-body">
+              <div class="table-body-row">
+                <div class="table-body-row-cell">
+                  <span>ZFZ25091000002</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <div>Document</div>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Sufiyan</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Dubai Customs</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Drafted</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Drafted</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Pending</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>AED 23.10</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <img
+                    src="./assets/icons/pencil.svg"
+                    class="booking-edit-btn"
+                  />
+                  <img src="./assets/icons/three-dot.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="table-pagination"
+            data-name="Title"
+            data-node-id="2108:18962"
+          >
+            <div class="pagination-left hidden">
+              <span class="txt-low-mid">Rows per page</span>
+              <div
+                class="rows-per-page"
+                data-name="Rows Per Page Dropdown"
+                data-node-id="2108:18965"
+              >
+                <select aria-label="Rows per page">
+                  <option selected>9</option>
+                  <option>10</option>
+                  <option>20</option>
+                  <option>50</option>
+                </select>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div
+              class="pagination-right"
+              data-name="Pagination Controls"
+              data-node-id="2108:18969"
+            >
+              <div
+                class="showing"
+                data-name="Showing Text"
+                data-node-id="2108:18970"
+              >
+                <span class="txt-low-mid">Showing</span>
+                <span
+                  class="page-chip"
+                  data-name="Current Page Number"
+                  data-node-id="2108:18972"
+                  >1</span
+                >
+                <span class="txt-low-mid">of 20 pages</span>
+              </div>
+              <div
+                class="page-nav"
+                data-name="Page Navigation"
+                data-node-id="2108:18975"
+              >
+                <button
+                  class="nav-arrow prev"
+                  aria-label="Previous page"
+                ></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="nav-arrow next" aria-label="Next page"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="booking-details remove">
           <div class="booking-scrollable">
             <!-- first box -->
             <div class="booking-box">
@@ -574,5 +754,6 @@
         </section>
       </main>
     </div>
+    <script src="./assets/js/booking.js"></script>
   </body>
 </html>

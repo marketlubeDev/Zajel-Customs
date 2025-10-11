@@ -133,3 +133,20 @@
 .sidebar-item:hover {
   background-color: rgba(0, 0, 0, 0.03);
 }
+.nav-btn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+  .nav-txt-low {
+    display: none;
+  }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
