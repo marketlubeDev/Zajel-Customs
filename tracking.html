@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../assets/css/base/variables.css" />
     <link rel="stylesheet" href="../assets/css/base/typo.css" />
     <link rel="stylesheet" href="../assets/css/base/buttons.css" />
-    <link rel="stylesheet" href="../assets/css/booking.css" />
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
@@ -16,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/tracking.css" />
   </head>
   <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="container">
       <nav class="sidebar">
         <div class="sidebar-top">
@@ -97,9 +97,14 @@
       </nav>
       <main class="main">
         <header class="main-header">
-          <div>
-            <h2 class="txt-large">Track shipment</h2>
-            <span class="txt-low-mid"
+          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="main-header-content">
+            <h2 class="txt-large main-header-title">Track shipment</h2>
+            <span class="txt-low-mid main-header-subtitle"
               >Track your package in real time with just your AWB number</span
             >
           </div>
@@ -151,5 +156,32 @@
         </section>
       </main>
     </div>
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarOverlay.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking on overlay
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+      });
+      
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>

@@ -14,5 +14,6 @@ body {
 @media (max-width: 600px) {
   body {
     background-color: var(--color-white);
+    padding: 0;
   }
 }
