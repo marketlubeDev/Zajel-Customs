@@ -11,8 +11,9 @@ body {
   font-family: "Inter";
   overflow-x: hidden; /* avoid x-axis overflow across pages */
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   body {
     background-color: var(--color-white);
+    padding: 0;
   }
 }
