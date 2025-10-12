@@ -2,9 +2,14 @@
   width: 100%;
   flex: 1;
   padding: 2rem;
+
   display: flex; /* enable internal flex column */
   flex-direction: column;
-  min-height: 0; /* allow inner scroll area to shrink */
+  min-height: 0;
+}
+.new-booking-details {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 .booking-scrollable {
   width: 100%;
@@ -13,6 +18,9 @@
   overflow-y: auto; /* vertical scroll only */
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+}
+.new-booking-details .booking-scrollable {
+  overflow: hidden;
 }
 .booking-box {
   height: fit-content;
@@ -26,10 +34,11 @@
   padding: 0.8rem 1.25rem;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
-}
-.booking-box-head {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+}
+.new-booking-details .booking-box-head {
+  margin-bottom: 1rem;
 }
 
 .booking-box-body-head {
@@ -37,7 +46,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1.25rem;
-  margin-top: 1rem;
+
+  padding-bottom: 0rem;
 }
 .booking-box-body-head .form-label {
   color: var(--primary-blue);
@@ -104,3 +114,26 @@
 }
 
 /* Reserve space at bottom so last content not hidden under bar */
+.new-booking-process {
+  width: 90%;
+  margin: 0 auto;
+}
+.booking-details .signup-progress-txt {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.booking-details .label-1 {
+  transform: translateX(-30%);
+}
+.booking-details .label-2 {
+  /* transform: translateX(-30%); */
+}
+.booking-details .label-3 {
+  transform: translateX(30%);
+}
+.booking-details .t-1 {
+  transform: translateX(-5%);
+}
+.booking-details .t-3 {
+  transform: translateX(7%);
+}
