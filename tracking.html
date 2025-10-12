@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
-    
+
     <link rel="stylesheet" href="../assets/css/tracking.css" />
   </head>
   <body>
@@ -97,9 +97,25 @@
       </nav>
       <main class="main">
         <header class="main-header">
-          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <button
+            class="mobile-menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
           <div class="main-header-content">
@@ -108,21 +124,23 @@
               >Track your package in real time with just your AWB number</span
             >
           </div>
-         <div class="tracking-header-actions">
-          <button class="moon-line">
-            <img src="../assets/icons/moon-line.svg" alt="" />
-          </button>
-          <button class="moon-line" aria-label="More options">
-            <img src="../assets/icons/three-dot.svg" alt="" />
-          </button>
-         </div>
+          <div class="tracking-header-actions">
+            <button class="moon-line">
+              <img src="../assets/icons/moon-line.svg" alt="" />
+            </button>
+            <button class="moon-line" aria-label="More options">
+              <img src="../assets/icons/three-dot.svg" alt="" />
+            </button>
+          </div>
         </header>
 
         <section class="tracking-details">
           <div class="tracking-scrollable">
             <div class="tracking-box tracking-controls">
               <div class="tracking-box-body tracking-controls-body">
-                <label class="form-label" for="awb-input">Enter your AWB number</label>
+                <label class="form-label" for="awb-input"
+                  >Enter your AWB number</label
+                >
                 <div class="tracking-box-body-content tracking-row">
                   <div class="tracking-input-wrap">
                     <span class="tracking-search-icon">
@@ -136,13 +154,34 @@
                       placeholder="Enter your AWB number"
                       autocomplete="off"
                     />
-                    <button class="tracking-input-clear" aria-label="Clear input" type="button">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 1L1 13M1 1L13 13" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <button
+                      class="tracking-input-clear"
+                      aria-label="Clear input"
+                      type="button"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 1L1 13M1 1L13 13"
+                          stroke="#9CA3AF"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </button>
                   </div>
-                  <button class="btn gradient-btn tracking-btn" aria-label="Track shipment">Track shipment</button>
+                  <button
+                    class="btn gradient-btn tracking-btn"
+                    aria-label="Track shipment"
+                  >
+                    Track shipment
+                  </button>
                 </div>
               </div>
               <div class="tracking-divider"></div>
@@ -150,9 +189,13 @@
 
             <div class="tracking-box tracking-empty">
               <div class="tracking-empty-inner">
-                <img src="../assets/images/tracking.png" alt="empty-state" class="tracking-empty-img" />
+                <img
+                  src="../assets/images/tracking.png"
+                  alt="empty-state"
+                  class="tracking-empty-img"
+                />
                 <p class="txt-low-mid tracking-empty-text">
-                  Enter your AWB number to view the latest <br>
+                  Enter your AWB number to view the latest <br />
                   status and complete delivery timeline.
                 </p>
               </div>
@@ -163,39 +206,51 @@
     </div>
     <script>
       // Mobile menu toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
-      
-      menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarOverlay.classList.toggle('active');
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        sidebarOverlay.classList.toggle("active");
       });
-      
+
       // Close sidebar when clicking on overlay
-      sidebarOverlay.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+      sidebarOverlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
       });
-      
+
       // Close sidebar when clicking outside on mobile
-      document.addEventListener('click', (e) => {
+      document.addEventListener("click", (e) => {
         if (window.innerWidth <= 768) {
           if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
+            sidebar.classList.remove("active");
+            sidebarOverlay.classList.remove("active");
           }
         }
       });
 
       // Clear input button functionality
-      const awbInput = document.getElementById('awb-input');
-      const clearButton = document.querySelector('.tracking-input-clear');
-      
+      const awbInput = document.getElementById("awb-input");
+      const clearButton = document.querySelector(".tracking-input-clear");
+
       if (clearButton && awbInput) {
-        clearButton.addEventListener('click', () => {
-          awbInput.value = '';
+        clearButton.addEventListener("click", () => {
+          awbInput.value = "";
           awbInput.focus();
+        });
+      }
+
+      // Track shipment button - navigate to tracking details
+      const trackBtn = document.querySelector(".tracking-btn");
+      if (trackBtn) {
+        trackBtn.addEventListener("click", () => {
+          const awb = awbInput ? awbInput.value.trim() : "";
+          const url = awb
+            ? `trackingDetails.html?awb=${encodeURIComponent(awb)}`
+            : "trackingDetails.html";
+          window.location.href = url;
         });
       }
     </script>
