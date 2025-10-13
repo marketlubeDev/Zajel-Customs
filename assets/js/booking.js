@@ -5,6 +5,8 @@ const newBookingNextBtn = document.querySelector(".booking-next-btn");
 
 const bookingTable = document.querySelector(".booking-table");
 const bookingDetails = document.querySelector(".booking-details");
+const newBookingDetails = document.querySelector(".new-booking-details");
+const newBookingBtns = document.querySelectorAll(".new-booking-btn");
 
 // Mobile menu elements
 const menuToggle = document.getElementById("menuToggle");
@@ -22,6 +24,16 @@ const handleEditBooking = () => {
     bookingTable.classList.add("remove");
     bookingDetails.classList.remove("remove");
   }
+  if (newBookingDetails) newBookingDetails.classList.add("remove");
+
+  if (backBtnLeft) backBtnLeft.classList.remove("remove");
+  if (navBtn) navBtn.classList.add("remove");
+};
+
+const handleNewBooking = () => {
+  if (bookingTable) bookingTable.classList.add("remove");
+  if (bookingDetails) bookingDetails.classList.add("remove");
+  if (newBookingDetails) newBookingDetails.classList.remove("remove");
 
   if (backBtnLeft) backBtnLeft.classList.remove("remove");
   if (navBtn) navBtn.classList.add("remove");
@@ -74,5 +86,18 @@ document.querySelectorAll(".booking-card-mobile").forEach((card) => {
   });
 });
 
+// View details button click handler
+document.querySelectorAll(".view-details-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    handleEditBooking();
+  });
+});
+
 if (editBtn) editBtn.addEventListener("click", handleEditBooking);
 if (backBtnLeft) backBtnLeft.addEventListener("click", handleBackBtnLeft);
+
+// New booking buttons click handler
+newBookingBtns.forEach((btn) => {
+  btn.addEventListener("click", handleNewBooking);
+});
