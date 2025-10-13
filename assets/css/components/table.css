@@ -338,6 +338,7 @@
     width: 12px;
     height: 12px;
     opacity: 0.4;
+    transition: transform 0.3s ease;
   }
 
   .booking-card-status.in-progress {
@@ -427,6 +428,110 @@
 
   .booking-card-payment-dot.failed {
     background: #ef4444;
+  }
+
+  /* Expanded content */
+  .booking-card-expanded {
+    display: none;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .booking-card-mobile.expanded {
+    background: white;
+  }
+
+  .booking-card-mobile.expanded .booking-card-expanded {
+    display: flex;
+  }
+
+  .booking-card-mobile.expanded .booking-card-dropdown svg {
+    transform: rotate(180deg);
+  }
+
+  .booking-card-route {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .booking-route-path {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .route-location {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .booking-card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .view-details-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    text-decoration: none;
+    background: #5192e224;
+    border: none;
+    border-radius: 12px;
+    height: 40px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .view-details-link:active {
+    background: #f9fafb;
+  }
+
+  .booking-card-actions-left {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .booking-card-actions-right {
+    display: flex;
+    gap: 8px;
+  }
+
+  .booking-card-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid #5192e224;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .icon-btn:active {
+    background: #f9fafb;
+    transform: scale(0.95);
   }
 
   /* Mobile action buttons */
