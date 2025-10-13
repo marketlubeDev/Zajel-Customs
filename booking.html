@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
+    <link rel="stylesheet" href="../assets/css/components/searchbar.css" />
     <link
       rel="stylesheet"
       href="../assets/css/components/booking-details.css"
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/components/progress.css" />
   </head>
   <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="container">
       <nav class="sidebar">
         <div class="sidebar-top">
@@ -100,6 +102,11 @@
       </nav>
       <main class="main">
         <header class="main-header">
+          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
           <div class="main-header-left">
             <div class="back-btn-left remove">
               <img src="./assets/icons/back.svg" />
@@ -125,17 +132,24 @@
           <div class="table-filter-container">
             <div class="table-filter">
               <!-- search bar -->
-              <div class="form-input searchbar">
-                <img src="../assets/icons/Search Icon.svg" alt="search" />
+              <div class="address-search">
+                <span class="search-icon">
+                  <img src="../assets/icons/Search Icon.svg" alt="" />
+                </span>
                 <input
                   type="text"
-                  id="address"
-                  name="address"
-                  class="search-item"
+                  class="form-input search-input"
                   placeholder="Search..."
-                  autocomplete="address"
+                  autocomplete="off"
                 />
+                <span class="search-shortcut">⌘1</span>
               </div>
+              <!-- Mobile filter button -->
+              <button class="table-filter-mobile-btn" aria-label="Filter">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 5H18M5 10H15M8 15H12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
               <!-- filter one -->
               <div class="form-input table-selector">
                 <select value="All Status">
@@ -289,6 +303,189 @@
                 <button class="nav-arrow next" aria-label="Next page"></button>
               </div>
             </div>
+          </div>
+
+          <!-- Mobile Booking Cards -->
+          <div class="booking-cards-container">
+            <!-- Booking Card 1 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status in-progress">
+                    In Progress
+                  </div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.55.00</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot failed"></span>
+                    <span class="booking-card-value">Failed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 2 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status completed">
+                    Completed
+                  </div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Layla</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Fujairah customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 44.50</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot approved"></span>
+                    <span class="booking-card-value">Approved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 3 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000004</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status drafted">
+                    Drafted
+                  </div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.10</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot pending"></span>
+                    <span class="booking-card-value">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 4 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status completed">
+                    Completed
+                  </div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.55.00</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot approved"></span>
+                    <span class="booking-card-value">Approved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Action Buttons -->
+          <div class="booking-mobile-actions">
+            <button class="export-btn">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M4.66667 6.66667L8 10M8 10L11.3333 6.66667M8 10V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Export as PDF
+            </button>
+            <button class="btn gradient-btn">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 3V13M3 8H13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              New Booking
+            </button>
           </div>
         </section>
 
@@ -1251,5 +1448,32 @@
       </main>
     </div>
     <script src="./assets/js/booking.js"></script>
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarOverlay.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking on overlay
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+      });
+      
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1024) {
+          if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
