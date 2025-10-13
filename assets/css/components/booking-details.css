@@ -20,7 +20,7 @@
   -webkit-overflow-scrolling: touch;
 }
 .new-booking-details .booking-scrollable {
-  overflow: hidden;
+  overflow: auto;
 }
 .booking-box {
   height: fit-content;
@@ -52,6 +52,41 @@
 .booking-box-body-head .form-label {
   color: var(--primary-blue);
   font-size: 1.1rem;
+}
+
+.choose-saved-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.choose-saved-address:hover {
+  opacity: 0.8;
+}
+
+.save-shipper-checkbox {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-shipper-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-blue);
+}
+
+.save-shipper-checkbox label {
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
 }
 .booking-box-body-content {
   padding: 1rem 2rem;
@@ -96,6 +131,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 12.5rem;
 }
 .booking-action-bar .outline-btn {
   height: 44px;
