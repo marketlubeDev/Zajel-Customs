@@ -1484,45 +1484,5 @@
       </main>
     </div>
     <script src="./assets/js/booking.js"></script>
-    <script>
-      // Mobile menu toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
-      
-      menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarOverlay.classList.toggle('active');
-      });
-      
-      // Close sidebar when clicking on overlay
-      sidebarOverlay.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-      });
-      
-      // Close sidebar when clicking outside on mobile
-      document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 1024) {
-          if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-          }
-        }
-      });
-
-      // Booking card expand/collapse
-      document.querySelectorAll('.booking-card-mobile').forEach(card => {
-        card.addEventListener('click', (e) => {
-          // Don't expand if clicking on action buttons or links
-          if (e.target.closest('.icon-btn') || e.target.closest('.view-details-link')) {
-            return;
-          }
-          
-          // Toggle expanded state
-          card.classList.toggle('expanded');
-        });
-      });
-    </script>
   </body>
 </html>
