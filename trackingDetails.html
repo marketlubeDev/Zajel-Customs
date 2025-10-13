@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
     <link rel="stylesheet" href="../assets/css/components/progress.css" />
-    
+
     <link rel="stylesheet" href="../assets/css/trackingDetails.css" />
   </head>
   <body>
@@ -29,7 +29,7 @@
         >
           <div class="sidebar-mid-top">
             <h4>Main Menu</h4>
-            <a class="sidebar-item" href="#">
+            <a class="sidebar-item" href="./booking.html">
               <img
                 src="../assets/icons/booking-icon.svg"
                 alt=""
@@ -37,7 +37,7 @@
               />
               <span class="txt-mid">Booking</span>
             </a>
-            <a class="sidebar-item nav-effect" href="#">
+            <a class="sidebar-item nav-effect" href="./tracking.html">
               <img
                 src="../assets/icons/tracking-icon.svg"
                 alt=""
@@ -45,7 +45,7 @@
               />
               <span class="txt-mid">Tracking</span>
             </a>
-            <a class="sidebar-item" href="#">
+            <a class="sidebar-item" href="./savedAddresses.html">
               <img
                 src="../assets/icons/save-address.svg"
                 alt=""
@@ -98,9 +98,25 @@
       </nav>
       <main class="main">
         <header class="main-header">
-          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <button
+            class="mobile-menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
           <div class="main-header-content">
@@ -109,21 +125,23 @@
               >Track your package in real time with just your AWB number</span
             >
           </div>
-         <div class="tracking-header-actions">
-          <button class="moon-line">
-            <img src="../assets/icons/moon-line.svg" alt="" />
-          </button>
-          <button class="moon-line" aria-label="More options">
-            <img src="../assets/icons/three-dot.svg" alt="" />
-          </button>
-         </div>
+          <div class="tracking-header-actions">
+            <button class="moon-line">
+              <img src="../assets/icons/moon-line.svg" alt="" />
+            </button>
+            <button class="moon-line" aria-label="More options">
+              <img src="../assets/icons/three-dot.svg" alt="" />
+            </button>
+          </div>
         </header>
 
         <section class="tracking-details">
           <div class="tracking-scrollable">
             <div class="tracking-box tracking-controls">
               <div class="tracking-box-body tracking-controls-body">
-                <label class="form-label" for="awb-input">Enter your AWB number</label>
+                <label class="form-label" for="awb-input"
+                  >Enter your AWB number</label
+                >
                 <div class="tracking-box-body-content tracking-row">
                   <div class="tracking-input-wrap">
                     <span class="tracking-search-icon">
@@ -137,13 +155,34 @@
                       placeholder="Enter your AWB number"
                       autocomplete="off"
                     />
-                    <button class="tracking-input-clear" aria-label="Clear input" type="button">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 1L1 13M1 1L13 13" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <button
+                      class="tracking-input-clear"
+                      aria-label="Clear input"
+                      type="button"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 1L1 13M1 1L13 13"
+                          stroke="#9CA3AF"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
                       </svg>
                     </button>
                   </div>
-                  <button class="btn gradient-btn tracking-btn" aria-label="Track shipment">Track shipment</button>
+                  <button
+                    class="btn gradient-btn tracking-btn"
+                    aria-label="Track shipment"
+                  >
+                    Track shipment
+                  </button>
                 </div>
               </div>
               <div class="tracking-divider"></div>
@@ -152,73 +191,78 @@
             <div class="tracking-box tracking-results">
               <!-- Status Header -->
               <div class="tracking-status-header">
-             
-                  <div class="status-info">
-                    <span class="status-label">Current status</span>
-                    <h3 class="status-title">Arrived at destination hub</h3>
-                    <span class="status-date">Last updated on 22 Sep 2025, Friday</span>
-                  </div>
-     
-          
-                  <div class="status-awb">
-                    <span class="status-label">AWB</span>
-                    <span class="awb-number">ET00000000</span>
-                  </div>
-                  <div class="status-delivery">
-                    <span class="delivery-label">Estimated delivery</span>
-                    <span class="delivery-date">20 Sep 2025</span>
-                  </div>
-          
+                <div class="status-info">
+                  <span class="status-label">Current status</span>
+                  <h3 class="status-title">Arrived at destination hub</h3>
+                  <span class="status-date"
+                    >Last updated on 22 Sep 2025, Friday</span
+                  >
+                </div>
+
+                <div class="status-awb">
+                  <span class="status-label">AWB</span>
+                  <span class="awb-number">ET00000000</span>
+                </div>
+                <div class="status-delivery">
+                  <span class="delivery-label">Estimated delivery</span>
+                  <span class="delivery-date">20 Sep 2025</span>
+                </div>
               </div>
 
               <!-- Desktop Timeline -->
-     <div class="timeline-desktop">
-      <div class="signup-progress">
-        <img src="../assets/icons/Stages1.svg" alt="Completed" />
-        <span class="line"></span>
-        <img src="../assets/icons/Stages1.svg" alt="Completed" />
-        <span class="line"></span>
-        <img src="../assets/icons/Stages1.svg" alt="Completed" />
-        <span class="thin-line"></span>
-        <img src="../assets/icons/Stages2.svg" alt="Pending" />
-        <span class="thin-line"></span>
-        <img src="../assets/icons/Stages2.svg" alt="Pending" />
-      </div>
-      <div class="signup-progress-txt">
-        <div>
-          <span class="timeline-title">Pickup completed</span>
-          <span class="timeline-location">At Dubai, UAE</span>
-          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
-        </div>
-        <div style="text-align: center">
-          <span class="timeline-title">Pickup completed</span>
-          <span class="timeline-location">At Dubai, UAE</span>
-          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
-        </div>
-        <div style="text-align: center">
-          <span class="timeline-title">Pickup completed</span>
-          <span class="timeline-location">At Dubai, UAE</span>
-          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
-        </div>
-        <div style="text-align: center">
-          <span class="timeline-title">Pickup completed</span>
-          <span class="timeline-location">At Dubai, UAE</span>
-          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
-        </div>
-        <div style="text-align: right">
-          <span class="timeline-title">Pickup completed</span>
-          <span class="timeline-location">At Dubai, UAE</span>
-          <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
-        </div>
-      </div>
-     </div>
+              <div class="timeline-desktop">
+                <div class="signup-progress">
+                  <img src="../assets/icons/Stages1.svg" alt="Completed" />
+                  <span class="line"></span>
+                  <img src="../assets/icons/Stages1.svg" alt="Completed" />
+                  <span class="line"></span>
+                  <img src="../assets/icons/Stages1.svg" alt="Completed" />
+                  <span class="thin-line"></span>
+                  <img src="../assets/icons/Stages2.svg" alt="Pending" />
+                  <span class="thin-line"></span>
+                  <img src="../assets/icons/Stages2.svg" alt="Pending" />
+                </div>
+                <div class="signup-progress-txt">
+                  <div>
+                    <span class="timeline-title">Pickup completed</span>
+                    <span class="timeline-location">At Dubai, UAE</span>
+                    <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+                  </div>
+                  <div style="text-align: center">
+                    <span class="timeline-title">Pickup completed</span>
+                    <span class="timeline-location">At Dubai, UAE</span>
+                    <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+                  </div>
+                  <div style="text-align: center">
+                    <span class="timeline-title">Pickup completed</span>
+                    <span class="timeline-location">At Dubai, UAE</span>
+                    <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+                  </div>
+                  <div style="text-align: center">
+                    <span class="timeline-title">Pickup completed</span>
+                    <span class="timeline-location">At Dubai, UAE</span>
+                    <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+                  </div>
+                  <div style="text-align: right">
+                    <span class="timeline-title">Pickup completed</span>
+                    <span class="timeline-location">At Dubai, UAE</span>
+                    <span class="timeline-time">12 Sep 2025, 09:45 AM</span>
+                  </div>
+                </div>
+              </div>
 
               <!-- Mobile Timeline -->
               <div class="timeline-vertical">
                 <div class="timeline-item-v completed">
                   <div class="timeline-marker-v">
                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                      <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M1 5L4.5 8.5L11 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </div>
                   <div class="timeline-content-v">
@@ -230,12 +274,20 @@
                 <div class="timeline-item-v completed">
                   <div class="timeline-marker-v">
                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                      <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M1 5L4.5 8.5L11 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </div>
                   <div class="timeline-content-v">
                     <span class="timeline-title-v">Arrival at destination</span>
-                    <span class="timeline-desc-v">Arrived in New York, USA</span>
+                    <span class="timeline-desc-v"
+                      >Arrived in New York, USA</span
+                    >
                     <span class="timeline-time-v">18 Sep 2025, 11:30 AM</span>
                   </div>
                 </div>
@@ -243,7 +295,9 @@
                   <div class="timeline-marker-v"></div>
                   <div class="timeline-content-v">
                     <span class="timeline-title-v">Departure confirmed</span>
-                    <span class="timeline-desc-v">Leaving Frankfurt for New York</span>
+                    <span class="timeline-desc-v"
+                      >Leaving Frankfurt for New York</span
+                    >
                     <span class="timeline-time-v">Estimated: 18 Sep 2025</span>
                   </div>
                 </div>
@@ -251,7 +305,9 @@
                   <div class="timeline-marker-v"></div>
                   <div class="timeline-content-v">
                     <span class="timeline-title-v">Out for delivery</span>
-                    <span class="timeline-desc-v">On the way to final address</span>
+                    <span class="timeline-desc-v"
+                      >On the way to final address</span
+                    >
                     <span class="timeline-time-v">Estimated: 19 Sep 2025</span>
                   </div>
                 </div>
@@ -271,38 +327,38 @@
     </div>
     <script>
       // Mobile menu toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
-      
-      menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarOverlay.classList.toggle('active');
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        sidebarOverlay.classList.toggle("active");
       });
-      
+
       // Close sidebar when clicking on overlay
-      sidebarOverlay.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+      sidebarOverlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
       });
-      
+
       // Close sidebar when clicking outside on mobile
-      document.addEventListener('click', (e) => {
+      document.addEventListener("click", (e) => {
         if (window.innerWidth <= 768) {
           if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
+            sidebar.classList.remove("active");
+            sidebarOverlay.classList.remove("active");
           }
         }
       });
 
       // Clear input button functionality
-      const awbInput = document.getElementById('awb-input');
-      const clearButton = document.querySelector('.tracking-input-clear');
-      
+      const awbInput = document.getElementById("awb-input");
+      const clearButton = document.querySelector(".tracking-input-clear");
+
       if (clearButton && awbInput) {
-        clearButton.addEventListener('click', () => {
-          awbInput.value = '';
+        clearButton.addEventListener("click", () => {
+          awbInput.value = "";
           awbInput.focus();
         });
       }

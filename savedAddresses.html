@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
     <link rel="stylesheet" href="../assets/css/components/searchbar.css" />
-    
+
     <link rel="stylesheet" href="../assets/css/savedAddresses.css" />
   </head>
   <body>
@@ -29,7 +29,7 @@
         >
           <div class="sidebar-mid-top">
             <h4>Main Menu</h4>
-            <a class="sidebar-item" href="#">
+            <a class="sidebar-item" href="./booking.html">
               <img
                 src="../assets/icons/booking-icon.svg"
                 alt=""
@@ -37,7 +37,7 @@
               />
               <span class="txt-mid">Booking</span>
             </a>
-            <a class="sidebar-item" href="#">
+            <a class="sidebar-item" href="./tracking.html">
               <img
                 src="../assets/icons/tracking-icon.svg"
                 alt=""
@@ -45,7 +45,7 @@
               />
               <span class="txt-mid">Tracking</span>
             </a>
-            <a class="sidebar-item nav-effect" href="#">
+            <a class="sidebar-item nav-effect" href="./savedAddresses.html">
               <img
                 src="../assets/icons/save-address.svg"
                 alt=""
@@ -98,9 +98,25 @@
       </nav>
       <main class="main">
         <header class="main-header">
-          <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <button
+            class="mobile-menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
           <div class="main-header-content">
@@ -109,65 +125,110 @@
               >View and manage addresses to use for future bookings</span
             >
           </div>
-         <div class="address-header-actions">
-          <button class="moon-line">
-            <img src="../assets/icons/moon-line.svg" alt="" />
-          </button>
-          <button class="moon-line" aria-label="More options">
-            <img src="../assets/icons/three-dot.svg" alt="" />
-          </button>
-         </div>
+          <div class="address-header-actions">
+            <button class="moon-line">
+              <img src="../assets/icons/moon-line.svg" alt="" />
+            </button>
+            <button class="moon-line" aria-label="More options">
+              <img src="../assets/icons/three-dot.svg" alt="" />
+            </button>
+          </div>
         </header>
 
         <section class="address-content">
           <div class="address-toolbar">
             <div class="address-search">
               <span class="search-icon">
-                      <img src="../assets/icons/Search Icon.svg" alt="" />
-                    </span>
-                    <input
-                      type="text"
+                <img src="../assets/icons/Search Icon.svg" alt="" />
+              </span>
+              <input
+                type="text"
                 class="form-input search-input"
                 placeholder="Search..."
-                      autocomplete="off"
-                    />
+                autocomplete="off"
+              />
               <span class="search-shortcut">⌘1</span>
             </div>
             <div class="address-actions">
               <div class="address-filter">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 4.5H16M4.5 9H13.5M7 13.5H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 4.5H16M4.5 9H13.5M7 13.5H11"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
                 <span>Recently added</span>
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" class="chevron-icon">
-                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  class="chevron-icon"
+                >
+                  <path
+                    d="M1 1L6 6L11 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <button class="btn gradient-btn add-address-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 3V13M3 8H13" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                      </svg>
+                  <path
+                    d="M8 3V13M3 8H13"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
                 Add new address
-                    </button>
-                  </div>
+              </button>
+            </div>
           </div>
 
           <div class="address-grid">
             <!-- Address Card 1 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -181,18 +242,34 @@
             <!-- Address Card 2 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -206,18 +283,34 @@
             <!-- Address Card 3 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -231,18 +324,34 @@
             <!-- Address Card 4 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -256,18 +365,34 @@
             <!-- Address Card 5 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -281,18 +406,34 @@
             <!-- Address Card 6 -->
             <div class="address-card">
               <h3 class="address-name">Ahmed Khan</h3>
-              <p class="address-text">Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE – 00000</p>
+              <p class="address-text">
+                Sheikh Zayed road, Al wasl building, Apt 1204, Dubai, UAE –
+                00000
+              </p>
               <div class="address-contact">
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z" fill="#6B7280"/>
+                    <path
+                      d="M14.5 11.3V13.3C14.5 13.5 14.4 13.7 14.2 13.8C13 14.5 11.6 14.9 10 14.9C4.5 14.9 0 10.4 0 4.9C0 3.3 0.4 1.9 1.1 0.7C1.2 0.5 1.4 0.4 1.6 0.4H3.6C3.9 0.4 4.1 0.6 4.1 0.9C4.1 1.8 4.3 2.6 4.6 3.4C4.7 3.6 4.6 3.9 4.5 4L3.3 5.2C4.1 6.7 5.3 7.9 6.8 8.7L8 7.5C8.1 7.4 8.4 7.3 8.6 7.4C9.4 7.7 10.2 7.9 11.1 7.9C11.4 7.9 11.6 8.1 11.6 8.4V10.4C11.6 10.9 11.1 11.3 10.6 11.3H14.5Z"
+                      fill="#6B7280"
+                    />
                   </svg>
                   <span>+971 55 123 4567</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z" stroke="#6B7280" stroke-width="1.2" fill="none"/>
-                    <path d="M14.5 3.5L8 8.5L1.5 3.5" stroke="#6B7280" stroke-width="1.2" fill="none"/>
+                    <path
+                      d="M2.5 2.5H13.5C14.1 2.5 14.5 2.9 14.5 3.5V12.5C14.5 13.1 14.1 13.5 13.5 13.5H2.5C1.9 13.5 1.5 13.1 1.5 12.5V3.5C1.5 2.9 1.9 2.5 2.5 2.5Z"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
+                    <path
+                      d="M14.5 3.5L8 8.5L1.5 3.5"
+                      stroke="#6B7280"
+                      stroke-width="1.2"
+                      fill="none"
+                    />
                   </svg>
                   <span>ahmed.khan@example.com</span>
                 </div>
@@ -314,11 +455,17 @@
           <h2 class="modal-title">Add new address</h2>
           <button class="modal-close" id="closeModal" aria-label="Close modal">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
         </div>
-        
+
         <div class="modal-body">
           <form class="address-form">
             <!-- Account Info Section -->
@@ -328,26 +475,44 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label class="form-label" for="fullName">Full name</label>
-                    <input type="text" id="fullName" class="form-input" placeholder="Enter full name" />
+                    <input
+                      type="text"
+                      id="fullName"
+                      class="form-input"
+                      placeholder="Enter full name"
+                    />
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="emailAddress">Email Address</label>
-                    <input type="email" id="emailAddress" class="form-input" placeholder="Enter email address" />
+                    <label class="form-label" for="emailAddress"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="emailAddress"
+                      class="form-input"
+                      placeholder="Enter email address"
+                    />
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="phoneNumber">Phone number</label>
+                  <label class="form-label" for="phoneNumber"
+                    >Phone number</label
+                  >
                   <div class="phone-input-wrapper">
                     <select class="phone-country-select">
                       <option value="+971" selected>🇦🇪 +971</option>
                       <option value="+1">🇺🇸 +1</option>
                       <option value="+44">🇬🇧 +44</option>
                     </select>
-                    <input type="tel" id="phoneNumber" class="phone-number-input" placeholder="Enter contact number" />
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      class="phone-number-input"
+                      placeholder="Enter contact number"
+                    />
                   </div>
                 </div>
-                
               </div>
             </div>
 
@@ -356,13 +521,36 @@
               <div class="form-section-title">ADDRESS INFO</div>
               <div class="form-section-content">
                 <div class="form-group">
-                  <label class="form-label" for="streetAddress">Street address</label>
+                  <label class="form-label" for="streetAddress"
+                    >Street address</label
+                  >
                   <div class="search-address-input">
-                    <input type="text" id="streetAddress" class="form-input" placeholder="Search or type area or address" />
+                    <input
+                      type="text"
+                      id="streetAddress"
+                      class="form-input"
+                      placeholder="Search or type area or address"
+                    />
                     <span class="search-address-icon">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <circle cx="7" cy="7" r="5.5" stroke="#9CA3AF" stroke-width="1.5"/>
-                        <path d="M13 13L11 11" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="7"
+                          cy="7"
+                          r="5.5"
+                          stroke="#9CA3AF"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M13 13L11 11"
+                          stroke="#9CA3AF"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
                       </svg>
                     </span>
                   </div>
@@ -370,26 +558,36 @@
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label class="form-label" for="landmark">Nearest landmark</label>
-                    <input type="text" id="landmark" class="form-input" placeholder="Enter your nearest landmark" />
+                    <label class="form-label" for="landmark"
+                      >Nearest landmark</label
+                    >
+                    <input
+                      type="text"
+                      id="landmark"
+                      class="form-input"
+                      placeholder="Enter your nearest landmark"
+                    />
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="city">City</label>
-                    <input type="text" id="city" class="form-input" placeholder="e.g., Dubai" />
+                    <input
+                      type="text"
+                      id="city"
+                      class="form-input"
+                      placeholder="e.g., Dubai"
+                    />
                   </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label" for="country">Country</label>
-                        <select id="country" class="form-input country-select">
-                          <option value="UAE" selected>🇦🇪 UAE</option>
-                          <option value="USA">🇺🇸 USA</option>
-                          <option value="UK">🇬🇧 UK</option>
-                        </select>
-                      </div>
+                  <div class="form-group">
+                    <label class="form-label" for="country">Country</label>
+                    <select id="country" class="form-input country-select">
+                      <option value="UAE" selected>🇦🇪 UAE</option>
+                      <option value="USA">🇺🇸 USA</option>
+                      <option value="UK">🇬🇧 UK</option>
+                    </select>
+                  </div>
                 </div>
-
-                
 
                 <div class="form-checkbox">
                   <input type="checkbox" id="defaultAddress" />
@@ -401,70 +599,74 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="modal-cancel-btn" id="cancelBtn">Cancel</button>
-          <button type="submit" class="btn gradient-btn save-btn">Save address</button>
+          <button type="button" class="modal-cancel-btn" id="cancelBtn">
+            Cancel
+          </button>
+          <button type="submit" class="btn gradient-btn save-btn">
+            Save address
+          </button>
         </div>
       </div>
     </div>
 
     <script>
       // Mobile menu toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
-      
-      menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarOverlay.classList.toggle('active');
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        sidebarOverlay.classList.toggle("active");
       });
-      
+
       // Close sidebar when clicking on overlay
-      sidebarOverlay.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+      sidebarOverlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
       });
-      
+
       // Close sidebar when clicking outside on mobile
-      document.addEventListener('click', (e) => {
+      document.addEventListener("click", (e) => {
         if (window.innerWidth <= 1024) {
           if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
+            sidebar.classList.remove("active");
+            sidebarOverlay.classList.remove("active");
           }
         }
       });
 
       // Modal functionality
-      const addAddressBtn = document.querySelector('.add-address-btn');
-      const addAddressModal = document.getElementById('addAddressModal');
-      const closeModalBtn = document.getElementById('closeModal');
-      const cancelBtn = document.getElementById('cancelBtn');
-      const modalContainer = document.querySelector('.modal-container');
+      const addAddressBtn = document.querySelector(".add-address-btn");
+      const addAddressModal = document.getElementById("addAddressModal");
+      const closeModalBtn = document.getElementById("closeModal");
+      const cancelBtn = document.getElementById("cancelBtn");
+      const modalContainer = document.querySelector(".modal-container");
 
       // Open modal
-      addAddressBtn.addEventListener('click', () => {
-        addAddressModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+      addAddressBtn.addEventListener("click", () => {
+        addAddressModal.classList.add("active");
+        document.body.style.overflow = "hidden";
       });
 
       // Close modal
       const closeModal = () => {
-        addAddressModal.classList.remove('active');
-        document.body.style.overflow = '';
+        addAddressModal.classList.remove("active");
+        document.body.style.overflow = "";
       };
 
-      closeModalBtn.addEventListener('click', closeModal);
-      cancelBtn.addEventListener('click', closeModal);
+      closeModalBtn.addEventListener("click", closeModal);
+      cancelBtn.addEventListener("click", closeModal);
 
       // Close modal when clicking outside
-      addAddressModal.addEventListener('click', (e) => {
+      addAddressModal.addEventListener("click", (e) => {
         if (e.target === addAddressModal) {
           closeModal();
         }
       });
 
       // Prevent closing when clicking inside modal
-      modalContainer.addEventListener('click', (e) => {
+      modalContainer.addEventListener("click", (e) => {
         e.stopPropagation();
       });
     </script>
