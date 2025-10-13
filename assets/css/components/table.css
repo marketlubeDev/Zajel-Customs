@@ -556,7 +556,7 @@
     justify-content: center;
     gap: 6px;
     height: 48px;
-    background: white;
+    background-color: rgba(22, 75, 125, 0.08);
     border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 13px;
