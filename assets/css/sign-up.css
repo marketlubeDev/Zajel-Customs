@@ -1,5 +1,7 @@
+/* Override base.css padding for sign-up page on desktop */
 body {
   background-color: white;
+  padding: 3rem 8rem;
 }
 .signup-container {
   height: 100%;

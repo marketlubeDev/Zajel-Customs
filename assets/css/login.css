@@ -1,3 +1,8 @@
+/* Override base.css padding for login page on desktop */
+body {
+  padding: 3rem 8rem;
+}
+
 .login-container {
   height: 100%;
   display: flex;
