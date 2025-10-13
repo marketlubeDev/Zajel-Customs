@@ -275,7 +275,7 @@
 
   /* Mobile booking card */
   .booking-card-mobile {
-    background: #fafafa;
+    background: #dfe9f33b;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 1rem;
@@ -368,6 +368,7 @@
     gap: 5px;
     flex: 0 0 calc(50% - 0.5rem);
     min-width: 0;
+    align-items: flex-start;
   }
 
   .booking-card-label {
@@ -396,17 +397,17 @@
   }
 
   .booking-card-payment {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 5px;
-  }
-
-  .booking-card-payment .booking-card-value {
-    font-size: 13px;
     padding: 4px 10px;
     border-radius: 2rem;
     background: #f3f4f6;
     border: 1px solid #e5e7eb;
+  }
+
+  .booking-card-payment .booking-card-value {
+    font-size: 13px;
   }
 
   .booking-card-payment-dot {
