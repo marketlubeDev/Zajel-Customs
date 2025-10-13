@@ -161,9 +161,7 @@
 .booking-details .label-1 {
   transform: translateX(-30%);
 }
-.booking-details .label-2 {
-  /* transform: translateX(-30%); */
-}
+
 .booking-details .label-3 {
   transform: translateX(30%);
 }

@@ -12,16 +12,29 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    order: -1;
-    margin-right: 1rem;
+    position: absolute;
+    left: 1rem;
     padding: 0.5rem;
     cursor: pointer;
+    z-index: 10;
   }
 
-  /* Adjust header layout when back button is visible */
+  /* Keep header centered when back button is visible */
   .main:has(.booking-details:not(.remove)) .main-header-left,
   .main:has(.new-booking-details:not(.remove)) .main-header-left {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  /* Adjust text alignment when back button is visible */
+  .main:has(.booking-details:not(.remove)) .main-header-left > div,
+  .main:has(.new-booking-details:not(.remove)) .main-header-left > div {
+    text-align: center;
+  }
+
+  /* Hide moon icon when back button is visible */
+  .main:has(.booking-details:not(.remove)) .moon-line,
+  .main:has(.new-booking-details:not(.remove)) .moon-line {
+    visibility: hidden;
   }
 
   /* Hide toggle when tracking modal is active */

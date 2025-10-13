@@ -105,9 +105,7 @@
   flex-shrink: 0;
 }
 
-.payment-option input[type="radio"]:checked + .payment-option-content {
-  /* Visual feedback when selected */
-}
+
 
 .payment-option-content {
   display: flex;
