@@ -152,7 +152,6 @@
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 1rem;
-    overflow: hidden;
   }
 
   .booking-box-head {
@@ -236,12 +235,12 @@
     width: 100%;
     padding: 1rem;
     background: white;
-    margin-bottom: 1rem;
   }
 
   .new-booking-details .booking-scrollable {
     padding: 0 1rem;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
+    overflow: auto;
   }
 
   .booking-details .signup-progress-txt {

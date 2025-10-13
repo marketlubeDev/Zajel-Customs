@@ -14,11 +14,14 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarOverlay = document.getElementById("sidebarOverlay");
 
 const handleBackBtnLeft = () => {
-  if (bookingDetails && bookingTable) {
-    bookingDetails.classList.add("remove");
-    bookingTable.classList.remove("remove");
-  }
+  // Hide both booking details and new booking details
+  if (bookingDetails) bookingDetails.classList.add("remove");
+  if (newBookingDetails) newBookingDetails.classList.add("remove");
 
+  // Show booking table
+  if (bookingTable) bookingTable.classList.remove("remove");
+
+  // Hide back button and show nav button
   if (backBtnLeft) backBtnLeft.classList.add("remove");
   if (navBtn) navBtn.classList.remove("remove");
 };
@@ -108,4 +111,67 @@ if (backBtnLeft) backBtnLeft.addEventListener("click", handleBackBtnLeft);
 // New booking buttons click handler
 newBookingBtns.forEach((btn) => {
   btn.addEventListener("click", handleNewBooking);
+});
+
+// Tracking Modal
+const trackingModal = document.getElementById("trackingModal");
+const trackingModalClose = document.getElementById("trackingModalClose");
+const trackingModalBack = document.getElementById("trackingModalBack");
+const trackingModalOverlay = document.getElementById("trackingModalOverlay");
+const bookingTrackBtn = document.querySelector(".booking-track-btn");
+const bookingLocationBtns = document.querySelectorAll(".booking-location-btn");
+
+// Open tracking modal function
+const openTrackingModal = () => {
+  if (trackingModal) {
+    trackingModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+};
+
+// Open tracking modal from three-dot icon
+if (bookingTrackBtn) {
+  bookingTrackBtn.addEventListener("click", openTrackingModal);
+}
+
+// Open tracking modal from location icon in mobile cards
+bookingLocationBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent card expand/collapse
+    openTrackingModal();
+  });
+});
+
+// Close tracking modal
+const closeTrackingModal = () => {
+  if (trackingModal) {
+    trackingModal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+};
+
+// Close button (desktop)
+if (trackingModalClose) {
+  trackingModalClose.addEventListener("click", closeTrackingModal);
+}
+
+// Back button (mobile)
+if (trackingModalBack) {
+  trackingModalBack.addEventListener("click", closeTrackingModal);
+}
+
+// Overlay click (desktop)
+if (trackingModalOverlay) {
+  trackingModalOverlay.addEventListener("click", closeTrackingModal);
+}
+
+// Close modal on Escape key
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "Escape" &&
+    trackingModal &&
+    trackingModal.classList.contains("active")
+  ) {
+    closeTrackingModal();
+  }
 });
