@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/components/table.css" />
     <link rel="stylesheet" href="../assets/css/components/searchbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/trackingModal.css" />
+    <link rel="stylesheet" href="../assets/css/components/paymentmodal.css" />
     <link
       rel="stylesheet"
       href="../assets/css/components/booking-details.css"
@@ -162,20 +164,8 @@
               </div>
               <!-- Mobile filter button -->
               <button class="table-filter-mobile-btn" aria-label="Filter">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 5H18M5 10H15M8 15H12"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M16.75 4V5.5H16L12.25 11.125V17.5H7.75V11.125L4 5.5H3.25V4H16.75ZM5.803 5.5L9.25 10.6705V16H10.75V10.6705L14.197 5.5H5.803Z" fill="white"/>
                 </svg>
               </button>
               <!-- filter one -->
@@ -205,7 +195,7 @@
                 Export as PDF
               </button>
 
-              <button class="btn gradient-btn">New Booking</button>
+              <button class="btn gradient-btn new-booking-btn">New Booking</button>
             </div>
           </div>
           <div class="table">
@@ -270,7 +260,7 @@
                     src="./assets/icons/pencil.svg"
                     class="booking-edit-btn"
                   />
-                  <img src="./assets/icons/three-dot.svg" />
+                  <img src="./assets/icons/three-dot.svg" class="booking-track-btn" style="cursor: pointer;" />
                 </div>
               </div>
             </div>
@@ -423,50 +413,15 @@
                     View details
                   </a>
                   <div class="booking-card-icons">
-                    <button class="icon-btn" aria-label="Location">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                      >
-                        <path
-                          d="M10 10.625C11.0355 10.625 11.875 9.78553 11.875 8.75C11.875 7.71447 11.0355 6.875 10 6.875C8.96447 6.875 8.125 7.71447 8.125 8.75C8.125 9.78553 8.96447 10.625 10 10.625Z"
-                          stroke="#6b7280"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M10 1.875C8.17727 1.875 6.42951 2.59933 5.14752 3.88128C3.86556 5.16324 3.14062 6.911 3.14062 8.73372C3.14062 10.0331 3.49219 10.9419 4.375 12.0831L10 18.125L15.625 12.0831C16.5078 10.9419 16.8594 10.0331 16.8594 8.73372C16.8594 6.911 16.1344 5.16324 14.8525 3.88128C13.5705 2.59933 11.8227 1.875 10 1.875Z"
-                          stroke="#6b7280"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
+                    <button class="icon-btn booking-location-btn" aria-label="Location">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                        <path d="M9.25736 16.4936C8.92015 16.8184 8.46932 17 8.00013 17C7.53095 17 7.08019 16.8184 6.74291 16.4936C3.6543 13.5008 -0.484811 10.1575 1.53371 5.30373C2.6251 2.67933 5.24494 1 8.00013 1C10.7554 1 13.3752 2.67933 14.4666 5.30373C16.4826 10.1514 12.3536 13.5111 9.25736 16.4936Z" stroke="#164B7D" stroke-width="1.5"/>
+                        <path d="M10.7212 8.2C10.7212 9.7464 9.50257 11 7.99928 11C6.49599 11 5.27734 9.7464 5.27734 8.2C5.27734 6.6536 6.49599 5.4 7.99928 5.4C9.50257 5.4 10.7212 6.6536 10.7212 8.2Z" stroke="#164B7D" stroke-width="1.5"/>
                       </svg>
                     </button>
                     <button class="icon-btn" aria-label="Settings">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                      >
-                        <path
-                          d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
-                          stroke="#6b7280"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M16.1667 12.5C16.0557 12.7513 16.0227 13.0301 16.0717 13.3006C16.1207 13.5711 16.2495 13.8203 16.4417 14.0167L16.4917 14.0667C16.6461 14.221 16.7687 14.4046 16.8526 14.6068C16.9365 14.809 16.9801 15.0259 16.9801 15.2448C16.9801 15.4638 16.9365 15.6806 16.8526 15.8828C16.7687 16.085 16.6461 16.2687 16.4917 16.4229C16.3374 16.5774 16.1538 16.6999 15.9516 16.7838C15.7494 16.8677 15.5326 16.9113 15.3136 16.9113C15.0947 16.9113 14.8778 16.8677 14.6757 16.7838C14.4735 16.6999 14.2898 16.5774 14.1356 16.4229L14.0856 16.3729C13.8892 16.1807 13.64 16.0519 13.3695 16.0029C13.099 15.9539 12.8202 15.9869 12.5689 16.0979C12.3223 16.2042 12.1133 16.3811 11.9679 16.6069C11.8225 16.8327 11.7469 17.0976 11.7501 17.3667V17.5C11.7501 17.9421 11.5745 18.3659 11.2619 18.6785C10.9493 18.9911 10.5255 19.1667 10.0834 19.1667C9.64131 19.1667 9.21751 18.9911 8.90494 18.6785C8.59238 18.3659 8.41675 17.9421 8.41675 17.5V17.425C8.40879 17.1481 8.32302 16.8787 8.16905 16.6483C8.01508 16.4179 7.79903 16.2358 7.54508 16.1229C7.29378 16.0119 7.01496 15.9789 6.74448 16.0279C6.474 16.0769 6.22476 16.2057 6.02841 16.3979L5.97841 16.4479C5.82418 16.6023 5.64054 16.7249 5.43834 16.8088C5.23614 16.8927 5.01928 16.9363 4.80033 16.9363C4.58138 16.9363 4.36452 16.8927 4.16232 16.8088C3.96012 16.7249 3.77648 16.6023 3.62225 16.4479C3.46779 16.2937 3.34524 16.11 3.26135 15.9078C3.17746 15.7056 3.13385 15.4888 3.13385 15.2698C3.13385 15.0508 3.17746 14.834 3.26135 14.6318C3.34524 14.4296 3.46779 14.2459 3.62225 14.0917L3.67225 14.0417C3.86443 13.8453 3.99325 13.5961 4.04223 13.3256C4.09122 13.0551 4.05824 12.7763 3.94716 12.525C3.84087 12.2784 3.66399 12.0694 3.43818 11.924C3.21237 11.7786 2.94751 11.703 2.67841 11.7062H2.50008C2.05805 11.7062 1.63425 11.5306 1.32169 11.218C1.00913 10.9055 0.833496 10.4817 0.833496 10.0396C0.833496 9.59752 1.00913 9.17372 1.32169 8.86116C1.63425 8.54859 2.05805 8.37296 2.50008 8.37296H2.57508C2.85201 8.365 3.12138 8.27923 3.35178 8.12526C3.58218 7.97129 3.76433 7.75524 3.87716 7.50129C3.98824 7.24999 4.02122 6.97117 3.97223 6.70069C3.92325 6.43021 3.79443 6.18097 3.60225 5.98463L3.55225 5.93463C3.39779 5.78039 3.27524 5.59675 3.19135 5.39455C3.10746 5.19235 3.06385 4.97549 3.06385 4.75654C3.06385 4.53759 3.10746 4.32073 3.19135 4.11854C3.27524 3.91634 3.39779 3.7327 3.55225 3.57846C3.70648 3.424 3.89012 3.30145 4.09232 3.21756C4.29452 3.13367 4.51138 3.09006 4.73033 3.09006C4.94928 3.09006 5.16614 3.13367 5.36834 3.21756C5.57054 3.30145 5.75418 3.424 5.90841 3.57846L5.95841 3.62846C6.15476 3.82064 6.404 3.94946 6.67448 3.99845C6.94496 4.04744 7.22378 4.01445 7.47508 3.90338H7.54508C7.79171 3.79708 8.00071 3.6202 8.14608 3.39439C8.29145 3.16858 8.36706 2.90372 8.36383 2.63463V2.45629C8.36383 2.01426 8.53947 1.59046 8.85203 1.2779C9.16459 0.965334 9.58839 0.789703 10.0304 0.789703C10.4725 0.789703 10.8963 0.965334 11.2088 1.2779C11.5214 1.59046 11.697 2.01426 11.697 2.45629V2.53129C11.6938 2.80038 11.7694 3.06524 11.9148 3.29105C12.0601 3.51686 12.2691 3.69374 12.5158 3.80004C12.7671 3.91112 13.0459 3.94411 13.3164 3.89512C13.5869 3.84613 13.8361 3.71731 14.0325 3.52513L14.0825 3.47513C14.2367 3.32067 14.4203 3.19812 14.6225 3.11423C14.8247 3.03034 15.0416 2.98673 15.2605 2.98673C15.4795 2.98673 15.6963 3.03034 15.8985 3.11423C16.1007 3.19812 16.2844 3.32067 16.4386 3.47513C16.5931 3.62936 16.7156 3.813 16.7995 4.0152C16.8834 4.2174 16.927 4.43426 16.927 4.65321C16.927 4.87216 16.8834 5.08902 16.7995 5.29122C16.7156 5.49342 16.5931 5.67706 16.4386 5.83129L16.3886 5.88129C16.1964 6.07764 16.0676 6.32688 16.0186 6.59736C15.9697 6.86784 16.0026 7.14666 16.1137 7.39796V7.46796C16.22 7.71459 16.3969 7.92359 16.6227 8.06896C16.8485 8.21433 17.1134 8.28994 17.3825 8.28671H17.5608C18.0028 8.28671 18.4266 8.46234 18.7392 8.7749C19.0518 9.08746 19.2274 9.51126 19.2274 9.95329C19.2274 10.3953 19.0518 10.8191 18.7392 11.1317C18.4266 11.4442 18.0028 11.6199 17.5608 11.6199H17.4858C17.2167 11.6167 16.9518 11.6923 16.726 11.8377C16.5002 11.983 16.3233 12.192 16.217 12.4387V12.5Z"
-                          stroke="#6b7280"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M5.28317 13.8C3.58467 13.8 2.73543 13.8 2.13079 13.4374C1.73563 13.2005 1.41727 12.8617 1.2118 12.4594C0.897434 11.8438 0.981938 11.0298 1.15095 9.402C1.29203 8.04312 1.36257 7.36364 1.70947 6.86465C1.93723 6.53703 2.24527 6.26851 2.60638 6.08282C3.15639 5.8 3.86531 5.8 5.28317 5.8H12.7168C14.1347 5.8 14.8436 5.8 15.3936 6.08282C15.7547 6.26851 16.0628 6.53703 16.2906 6.86465C16.6374 7.36364 16.708 8.04312 16.849 9.402C17.0181 11.0298 17.1026 11.8438 16.7882 12.4594C16.5827 12.8617 16.2644 13.2005 15.8692 13.4374C15.2646 13.8 14.4154 13.8 12.7168 13.8M13 5.8V4.2C13 2.6915 13 1.93726 12.5314 1.46863C12.0627 1 11.3085 1 9.8 1H8.2C6.69151 1 5.93726 1 5.46863 1.46863C5 1.93726 5 2.6915 5 4.2V5.8M13.8 9H13.8072M10.591 12.2H7.40904C6.86082 12.2 6.5867 12.2 6.35347 12.2871C6.04249 12.4032 5.77621 12.6288 5.59696 12.9279C5.46252 13.1523 5.39604 13.4409 5.26307 14.0179C5.05531 14.9196 4.95143 15.3704 5.02207 15.7319C5.11628 16.2139 5.4099 16.6219 5.81802 16.8379C6.12411 17 6.55242 17 7.40904 17H10.591C11.4476 17 11.8759 17 12.182 16.8379C12.5901 16.6219 12.8838 16.2139 12.9779 15.7319C13.0486 15.3704 12.9447 14.9196 12.737 14.0179C12.604 13.4409 12.5374 13.1523 12.403 12.9279C12.2238 12.6288 11.9575 12.4032 11.6466 12.2871C11.4133 12.2 11.1392 12.2 10.591 12.2Z" stroke="#164B7D" stroke-width="1.5"/>
                       </svg>
                     </button>
                   </div>
@@ -613,18 +568,12 @@
           <!-- Mobile Action Buttons -->
           <div class="booking-mobile-actions">
             <button class="export-btn">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M4.66667 6.66667L8 10M8 10L11.3333 6.66667M8 10V2"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+                <path d="M1.5 11.1053V7.73684C1.5 4.56106 1.5 2.97318 2.48659 1.98659C3.47318 1 5.06106 1 8.23684 1H10.7632C13.9389 1 15.5269 1 16.5134 1.98659C17.5 2.97318 17.5 4.56106 17.5 7.73684V11.1053M12.0263 11.1053C12.0263 11.1053 10.1657 13.6315 9.5 13.6315C8.83423 13.6316 6.97368 11.1052 6.97368 11.1052M9.5 13.2105V7.73684M11.1842 17H7.81579C5.04739 17 3.66318 17 2.73152 16.2354C2.56096 16.0954 2.40457 15.939 2.2646 15.7685C1.5 14.8368 1.5 13.4526 1.5 10.6842C1.5 7.91579 1.5 6.5316 2.2646 5.59994C2.40457 5.42938 2.56096 5.27299 2.73152 5.13302C3.66318 4.36842 5.04739 4.36842 7.81579 4.36842H11.1842C13.9526 4.36842 15.3368 4.36842 16.2685 5.13302C16.439 5.27299 16.5954 5.42938 16.7354 5.59994C17.5 6.5316 17.5 7.91579 17.5 10.6842C17.5 13.4526 17.5 14.8368 16.7354 15.7685C16.5954 15.939 16.439 16.0954 16.2685 16.2354C15.3368 17 13.9526 17 11.1842 17Z" stroke="#164B7D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Export as PDF
             </button>
-            <button class="btn gradient-btn">
+            <button class="btn gradient-btn new-booking-btn">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M8 3V13M3 8H13"
@@ -1109,13 +1058,13 @@
                 alt="signup-progress-1"
                 class="booking-process-1-img"
               />
-              <span class="thin-line"></span>
+              <span class="thin-line booking-line-1"></span>
               <img
                 src="./assets/icons/Stages2.svg"
                 class="booking-process-2-img"
                 alt="signup-progress-1"
               />
-              <span class="thin-line"></span>
+              <span class="thin-line booking-line-2"></span>
               <img
                 src="./assets/icons/Stages2.svg"
                 class="booking-process-3-img"
@@ -1125,15 +1074,15 @@
             <div class="signup-progress-txt">
               <div>
                 <div class="txt-small t-1">Step 1</div>
-                <div class="form-label label-1">Account Setup</div>
+                <div class="form-label label-1">Shipping Details</div>
               </div>
               <div style="text-align: center">
                 <div class="txt-small t-2">Step 2</div>
-                <div class="form-label label-2">Company & Address</div>
+                <div class="form-label label-2">Shipper Info</div>
               </div>
               <div style="text-align: right">
                 <div class="txt-small t-3">Step 3</div>
-                <div class="form-label label-3">Business info</div>
+                <div class="form-label label-3">Consignee Info</div>
               </div>
             </div>
           </div>
@@ -1147,42 +1096,38 @@
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
-                    <input
-                      type="text"
+                    <label class="form-label" for="product-type">Product type</label>
+                    <select
                       id="product-type"
                       name="product-type"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                    >
+                      <option value="">Select product type</option>
+                      <option value="document">Document</option>
+                      <option value="parcel">Parcel</option>
+                      <option value="package">Package</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="document-heading">Document Heading</label>
+                    <input
+                      type="text"
+                      id="document-heading"
+                      name="document-heading"
+                      class="form-input"
+                      placeholder="Enter document title (e.g., Invoice)"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="special-instructions">Special Instructions</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="special-instructions"
+                      name="special-instructions"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Add delivery/handling notes"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
@@ -1193,29 +1138,25 @@
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Document Reference No.</label
-                    >
+                    <label class="form-label" for="document-reference">Document Reference No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="document-reference"
+                      name="document-reference"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., INV-43219"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Additional Reference No.</label
-                    >
+                    <label class="form-label" for="additional-reference">Additional Reference No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="additional-reference"
+                      name="additional-reference"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., PO-99821"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
@@ -1226,58 +1167,58 @@
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type">Pieces</label>
+                    <label class="form-label" for="pieces">Pieces</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="pieces"
+                      name="pieces"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="No. of pieces"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type">Weight</label>
+                    <label class="form-label" for="weight">Weight</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="weight"
+                      name="weight"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="0.0 kg"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type">Length</label>
+                    <label class="form-label" for="length">Length</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="length"
+                      name="length"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="0 cm"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type">Width</label>
+                    <label class="form-label" for="width">Width</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="width"
+                      name="width"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="0 cm"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type">Height</label>
+                    <label class="form-label" for="height">Height</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="height"
+                      name="height"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="0 cm"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
@@ -1288,288 +1229,306 @@
               <div class="booking-box-head txt-mid">Shipper Info</div>
               <div class="booking-box-body">
                 <div class="booking-box-body-head">
-                  <h3 class="form-label">Basic Details</h3>
+                  <h3 class="form-label">Contact information</h3>
+                  <a href="#" class="choose-saved-address">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19" fill="none">
+                      <path d="M9.25736 16.9936C8.92015 17.3184 8.46932 17.5 8.00013 17.5C7.53095 17.5 7.08019 17.3184 6.74291 16.9936C3.6543 14.0008 -0.484811 10.6575 1.53371 5.80373C2.6251 3.17933 5.24494 1.5 8.00013 1.5C10.7554 1.5 13.3752 3.17933 14.4666 5.80373C16.4826 10.6514 12.3536 14.0111 9.25736 16.9936Z" stroke="#164B7D" stroke-width="1.5"/>
+                      <path d="M10.7212 8.7C10.7212 10.2464 9.50257 11.5 7.99928 11.5C6.49599 11.5 5.27734 10.2464 5.27734 8.7C5.27734 7.1536 6.49599 5.9 7.99928 5.9C9.50257 5.9 10.7212 7.1536 10.7212 8.7Z" stroke="#164B7D" stroke-width="1.5"/>
+                    </svg>
+                    Choose saved address
+                  </a>
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="contact-no">Contact No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="contact-no"
+                      name="contact-no"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Enter contact number"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="secondary-no">Secondary No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="secondary-no"
+                      name="secondary-no"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Enter alternate number"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="contact-person">Contact Person</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="contact-person"
+                      name="contact-person"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Full name of contact person"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="organization">Organization</label>
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      class="form-input"
+                      placeholder="Enter organisation name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="Enter email address"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
               </div>
               <div class="booking-box-body">
                 <div class="booking-box-body-head">
-                  <h3 class="form-label">References</h3>
+                  <h3 class="form-label">Address information</h3>
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Document Reference No.</label
+                    <label class="form-label" for="country">Country</label>
+                    <select
+                      id="country"
+                      name="country"
+                      class="form-input"
                     >
+                      <option value="UAE">UAE</option>
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="Kuwait">Kuwait</option>
+                      <option value="Bahrain">Bahrain</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="city">City</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="city"
+                      name="city"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., Dubai"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Additional Reference No.</label
-                    >
+                    <label class="form-label" for="postal-code">Postal code</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="postal-code"
+                      name="postal-code"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., 123456"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="address">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-input"
+                      placeholder="e.g., 24, Business Bay Street, Downtown"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="nearest-landmark">Nearest Landmark</label>
+                    <input
+                      type="text"
+                      id="nearest-landmark"
+                      name="nearest-landmark"
+                      class="form-input"
+                      placeholder="e.g., Near City Centre Mall"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="shipper-area">Shipper Area</label>
+                    <input
+                      type="text"
+                      id="shipper-area"
+                      name="shipper-area"
+                      class="form-input"
+                      placeholder="e.g., Al Barsha"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
               </div>
               <div class="booking-box-body">
-                <div class="booking-box-body-head">
-                  <h3 class="form-label">Package Info</h3>
-                </div>
-                <div class="booking-box-body-content">
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Pieces</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Weight</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Length</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Width</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Height</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
+                <div class="save-shipper-checkbox">
+                  <input type="checkbox" id="save-shipper" name="save-shipper" />
+                  <label for="save-shipper">Save Shipper Information</label>
                 </div>
               </div>
             </div>
             <!-- third box -->
             <div class="new-booking booking-box remove">
-              <div class="booking-box-head txt-mid">Cosengee info</div>
+              <div class="booking-box-head txt-mid">Consignee Info</div>
               <div class="booking-box-body">
                 <div class="booking-box-body-head">
-                  <h3 class="form-label">Basic Details</h3>
+                  <h3 class="form-label">Contact information</h3>
+                  <a href="#" class="choose-saved-address">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19" fill="none">
+                      <path d="M9.25736 16.9936C8.92015 17.3184 8.46932 17.5 8.00013 17.5C7.53095 17.5 7.08019 17.3184 6.74291 16.9936C3.6543 14.0008 -0.484811 10.6575 1.53371 5.80373C2.6251 3.17933 5.24494 1.5 8.00013 1.5C10.7554 1.5 13.3752 3.17933 14.4666 5.80373C16.4826 10.6514 12.3536 14.0111 9.25736 16.9936Z" stroke="#164B7D" stroke-width="1.5"/>
+                      <path d="M10.7212 8.7C10.7212 10.2464 9.50257 11.5 7.99928 11.5C6.49599 11.5 5.27734 10.2464 5.27734 8.7C5.27734 7.1536 6.49599 5.9 7.99928 5.9C9.50257 5.9 10.7212 7.1536 10.7212 8.7Z" stroke="#164B7D" stroke-width="1.5"/>
+                    </svg>
+                    Choose saved address
+                  </a>
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="consignee-contact-no">Contact No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="consignee-contact-no"
+                      name="consignee-contact-no"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Enter contact number"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="consignee-secondary-no">Secondary No.</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="consignee-secondary-no"
+                      name="consignee-secondary-no"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Enter alternate number"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Product Type</label
-                    >
+                    <label class="form-label" for="consignee-contact-person">Contact Person</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="consignee-contact-person"
+                      name="consignee-contact-person"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="Full name of contact person"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-organization">Organization</label>
+                    <input
+                      type="text"
+                      id="consignee-organization"
+                      name="consignee-organization"
+                      class="form-input"
+                      placeholder="Enter organisation name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-email">Email</label>
+                    <input
+                      type="email"
+                      id="consignee-email"
+                      name="consignee-email"
+                      class="form-input"
+                      placeholder="Enter email address"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
               </div>
               <div class="booking-box-body">
                 <div class="booking-box-body-head">
-                  <h3 class="form-label">References</h3>
+                  <h3 class="form-label">Address information</h3>
                 </div>
                 <div class="booking-box-body-content">
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Document Reference No.</label
+                    <label class="form-label" for="consignee-country">Country</label>
+                    <select
+                      id="consignee-country"
+                      name="consignee-country"
+                      class="form-input"
                     >
+                      <option value="UAE">UAE</option>
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="Kuwait">Kuwait</option>
+                      <option value="Bahrain">Bahrain</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-city">City</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="consignee-city"
+                      name="consignee-city"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., Dubai"
+                      autocomplete="off"
                     />
                   </div>
                   <div class="input-group">
-                    <label class="form-label" for="product-type"
-                      >Additional Reference No.</label
-                    >
+                    <label class="form-label" for="consignee-postal-code">Postal code</label>
                     <input
                       type="text"
-                      id="product-type"
-                      name="product-type"
+                      id="consignee-postal-code"
+                      name="consignee-postal-code"
                       class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
+                      placeholder="e.g., 123456"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-address">Address</label>
+                    <input
+                      type="text"
+                      id="consignee-address"
+                      name="consignee-address"
+                      class="form-input"
+                      placeholder="e.g., 24, Business Bay Street, Downtown"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-nearest-landmark">Nearest Landmark</label>
+                    <input
+                      type="text"
+                      id="consignee-nearest-landmark"
+                      name="consignee-nearest-landmark"
+                      class="form-input"
+                      placeholder="e.g., Near City Centre Mall"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="consignee-area">Consignee Area</label>
+                    <input
+                      type="text"
+                      id="consignee-area"
+                      name="consignee-area"
+                      class="form-input"
+                      placeholder="e.g., Al Barsha"
+                      autocomplete="off"
                     />
                   </div>
                 </div>
               </div>
               <div class="booking-box-body">
-                <div class="booking-box-body-head">
-                  <h3 class="form-label">Package Info</h3>
-                </div>
-                <div class="booking-box-body-content">
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Pieces</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Weight</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Length</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Width</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <label class="form-label" for="product-type">Height</label>
-                    <input
-                      type="text"
-                      id="product-type"
-                      name="product-type"
-                      class="form-input"
-                      placeholder="Document"
-                      autocomplete="product-type"
-                    />
-                  </div>
+                <div class="save-shipper-checkbox">
+                  <input type="checkbox" id="save-consignee" name="save-consignee" />
+                  <label for="save-consignee">Save Consignee Information</label>
                 </div>
               </div>
             </div>
@@ -1585,8 +1544,8 @@
               </button>
               <div class="action-right">
                 <button
-                  class="btn gradient-btn paynow-btn booking-next-btn"
-                  aria-label="Pay now"
+                  class="btn gradient-btn booking-next-btn"
+                  aria-label="Next"
                 >
                   Next
                 </button>
@@ -1594,6 +1553,162 @@
             </div>
           </div>
         </section>
+
+        <!-- Tracking Modal -->
+        <div class="tracking-modal" id="trackingModal">
+          <div class="tracking-modal-overlay" id="trackingModalOverlay"></div>
+          <div class="tracking-modal-content">
+            <div class="tracking-modal-header">
+              <button class="tracking-modal-back" id="trackingModalBack" aria-label="Go back">
+                <img src="./assets/icons/back.svg" alt="Back" />
+              </button>
+              <h2 class="tracking-modal-title-mobile">Tracking</h2>
+              <button class="tracking-modal-close" id="trackingModalClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="tracking-modal-info">
+              <div class="tracking-modal-header-content">
+                <span class="status-label">Track package</span>
+                <h3 class="tracking-modal-awb">ZFZ25091000002</h3>
+              </div>
+            </div>
+            
+            <div class="tracking-modal-status">
+              <div class="status-info-modal">
+                <span class="status-label">Current status</span>
+                <h3 class="tracking-modal-awb">Arrived at destination hub</h3>
+                <span class="status-label">Last updated on 22 Sep 2025, Friday</span>
+              </div>
+              
+              <div class="status-delivery-modal">
+                <span class="status-label">Estimated delivery</span>
+                <span class="tracking-modal-awb">20 Sep 2025</span>
+              </div>
+            </div>
+            
+            <div class="tracking-modal-timeline">
+              <div class="timeline-item-v completed">
+                <div class="timeline-marker-v">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">In transit</span>
+                    <span class="status-label">Departed from Frankfurt</span>
+                  </div>
+                  <span class="status-label">15 Sep 2025  03:15 PM</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v completed">
+                <div class="timeline-marker-v">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Arrival at destination</span>
+                    <span class="status-label">Arrived in New York, USA</span>
+                  </div>
+                  <span class="status-label">16 Sep 2025  11:30 AM</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Departure confirmed</span>
+                    <span class="status-label">Leaving Frankfurt for New York</span>
+                  </div>
+                  <span class="status-label">Estimated: 18 Sep 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Out for delivery</span>
+                    <span class="status-label">On the way to final address</span>
+                  </div>
+                  <span class="status-label">Estimated: 15 Sep 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Customs clearance</span>
+                  </div>
+                  <span class="status-label">Estimated: 20 Sep 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Modal -->
+        <div class="payment-modal" id="paymentModal">
+          <div class="payment-modal-overlay" id="paymentModalOverlay"></div>
+          <div class="payment-modal-content">
+            <div class="payment-modal-header">
+              <h3 class="payment-modal-title">Choose payment method</h3>
+              <button class="payment-modal-close" id="paymentModalClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            
+            <p class="payment-modal-subtitle">Select your preferred way to pay for this shipment.</p>
+            
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="card" checked />
+                <div class="payment-option-content">
+                  <div class="payment-option-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
+                      <path d="M2.0528 2.5129L1.49299 2.01379L1.49298 2.0138L2.0528 2.5129ZM2.60746 1.99087L3.07228 2.57946L3.07229 2.57945L2.60746 1.99087ZM19.3925 1.99087L18.9277 2.57944L18.9277 2.57949L19.3925 1.99087ZM19.9472 2.5129L20.507 2.0138L20.507 2.01377L19.9472 2.5129ZM19.9472 15.4871L19.3874 14.988L19.3874 14.988L19.9472 15.4871ZM19.3925 16.0091L18.9277 15.4205L18.9276 15.4205L19.3925 16.0091ZM2.60746 16.0091L2.1426 16.5977L2.14262 16.5977L2.60746 16.0091ZM2.0528 15.4871L2.61265 14.988L2.61262 14.988L2.0528 15.4871ZM9 12.25C8.58579 12.25 8.25 12.5858 8.25 13C8.25 13.4142 8.58579 13.75 9 13.75V13V12.25ZM10.5 13.75C10.9142 13.75 11.25 13.4142 11.25 13C11.25 12.5858 10.9142 12.25 10.5 12.25V13V13.75ZM13.5 12.25C13.0858 12.25 12.75 12.5858 12.75 13C12.75 13.4142 13.0858 13.75 13.5 13.75V13V12.25ZM17 13.75C17.4142 13.75 17.75 13.4142 17.75 13C17.75 12.5858 17.4142 12.25 17 12.25V13V13.75ZM1 9H1.75C1.75 7.21144 1.75143 5.94115 1.87558 4.96759C1.99708 4.01479 2.22599 3.44566 2.61262 3.012L2.0528 2.5129L1.49298 2.0138C0.826806 2.76101 0.529321 3.66669 0.387625 4.77785C0.248574 5.86826 0.25 7.25108 0.25 9H1ZM2.0528 2.5129L2.61261 3.01201C2.7517 2.856 2.90546 2.71121 3.07228 2.57946L2.60746 1.99087L2.14264 1.40228C1.9081 1.58749 1.69068 1.79206 1.49299 2.01379L2.0528 2.5129ZM2.60746 1.99087L3.07229 2.57945C3.54359 2.20725 4.16816 1.98556 5.19895 1.86912C6.24353 1.75112 7.60311 1.75 9.5 1.75V1V0.25C7.63832 0.25 6.17896 0.248877 5.03058 0.378598C3.86841 0.509877 2.926 0.78362 2.14263 1.40229L2.60746 1.99087ZM9.5 1V1.75H12.5V1V0.25H9.5V1ZM12.5 1V1.75C14.3969 1.75 15.7565 1.75112 16.8011 1.86912C17.8319 1.98556 18.4564 2.20725 18.9277 2.57944L19.3925 1.99087L19.8573 1.4023C19.074 0.78362 18.1316 0.509877 16.9694 0.378599C15.8211 0.248877 14.3617 0.25 12.5 0.25V1ZM19.3925 1.99087L18.9277 2.57949C19.0945 2.71123 19.2483 2.85602 19.3874 3.01203L19.9472 2.5129L20.507 2.01377C20.3093 1.79204 20.0919 1.58747 19.8573 1.40225L19.3925 1.99087ZM19.9472 2.5129L19.3874 3.012C19.774 3.44566 20.0029 4.01479 20.1244 4.96759C20.2486 5.94115 20.25 7.21144 20.25 9H21H21.75C21.75 7.25108 21.7514 5.86826 21.6124 4.77785C21.4707 3.66669 21.1732 2.76101 20.507 2.0138L19.9472 2.5129ZM21 9H20.25C20.25 10.7886 20.2486 12.0589 20.1244 13.0324C20.0029 13.9852 19.774 14.5543 19.3874 14.988L19.9472 15.4871L20.507 15.9862C21.1732 15.239 21.4707 14.3333 21.6124 13.2221C21.7514 12.1317 21.75 10.7489 21.75 9H21ZM19.9472 15.4871L19.3874 14.988C19.2484 15.1439 19.0946 15.2887 18.9277 15.4205L19.3925 16.0091L19.8573 16.5977C20.0918 16.4125 20.3092 16.2081 20.507 15.9862L19.9472 15.4871ZM19.3925 16.0091L18.9276 15.4205C18.4564 15.7927 17.8319 16.0144 16.8011 16.1309C15.7565 16.2489 14.3969 16.25 12.5 16.25V17V17.75C14.3617 17.75 15.8211 17.7511 16.9694 17.6214C18.1316 17.4901 19.074 17.2164 19.8574 16.5977L19.3925 16.0091ZM12.5 17V16.25H9.5V17V17.75H12.5V17ZM9.5 17V16.25C7.6031 16.25 6.24353 16.2489 5.19895 16.1309C4.16816 16.0144 3.5436 15.7927 3.0723 15.4205L2.60746 16.0091L2.14262 16.5977C2.92599 17.2164 3.86841 17.4901 5.03058 17.6214C6.17896 17.7511 7.63832 17.75 9.5 17.75V17ZM2.60746 16.0091L3.07232 15.4205C2.90537 15.2887 2.75164 15.144 2.61265 14.988L2.0528 15.4871L1.49295 15.9862C1.69074 16.208 1.90819 16.4125 2.1426 16.5977L2.60746 16.0091ZM2.0528 15.4871L2.61262 14.988C2.22599 14.5543 1.99708 13.9852 1.87558 13.0324C1.75143 12.0589 1.75 10.7886 1.75 9H1H0.25C0.25 10.7489 0.248574 12.1317 0.387625 13.2221C0.529322 14.3333 0.826808 15.239 1.49298 15.9862L2.0528 15.4871ZM9 13V13.75H10.5V13V12.25H9V13ZM13.5 13V13.75H17V13V12.25H13.5V13ZM1 6V6.75H21V6V5.25H1V6Z" fill="#164B7D"/>
+                    </svg>
+                  </div>
+                  <div class="payment-option-text">
+                    <div class="payment-option-title">Card</div>
+                    <div class="payment-option-subtitle">Pay by card - Visa, MasterCard, Amex, RuPay</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="payment-method" value="wallet" />
+                <div class="payment-option-content">
+                  <div class="payment-option-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.5 6.05123V2.35604C11.5 1.60712 10.8992 1 10.1581 1C9.94467 1 9.73433 1.05144 9.5445 1.15005L2.13525 4.99939C1.7452 5.20203 1.5 5.60803 1.5 6.05123M13.5833 11.9474C13.8134 11.9474 14 11.7588 14 11.5263C14 11.2938 13.8134 11.1053 13.5833 11.1053M13.5833 11.9474C13.3532 11.9474 13.1667 11.7588 13.1667 11.5263C13.1667 11.2938 13.3532 11.1053 13.5833 11.1053M13.5833 11.9474V11.1053M1.5 6.05263H11.5C13.857 6.05263 15.0355 6.05263 15.7677 6.79257C16.5 7.53255 16.5 8.72345 16.5 11.1053V11.9474C16.5 14.3292 16.5 15.5201 15.7677 16.26C15.0355 17 13.857 17 11.5 17H6.5C4.14297 17 2.96447 17 2.23223 16.26C1.5 15.5201 1.5 14.3292 1.5 11.9474V6.05263Z" stroke="#164B7D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="payment-option-text">
+                    <div class="payment-option-title">Wallet</div>
+                    <div class="payment-option-subtitle">AED 20.00</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="payment-modal-actions">
+              <button class="payment-cancel-link" id="paymentCancel">Cancel</button>
+              <button class="btn gradient-btn" id="confirmPayment">Confirm and pay</button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script src="./assets/js/booking.js"></script>

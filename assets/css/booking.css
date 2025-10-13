@@ -1,1 +1,44 @@
 /* Booking specific styles - base layout inherited from base.css */
+
+@media (max-width: 1024px) {
+  /* Hide toggle and show back button when booking details is visible */
+  .main:has(.booking-details:not(.remove)) .mobile-menu-toggle,
+  .main:has(.new-booking-details:not(.remove)) .mobile-menu-toggle {
+    display: none;
+  }
+
+  .main:has(.booking-details:not(.remove)) .back-btn-left,
+  .main:has(.new-booking-details:not(.remove)) .back-btn-left {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  /* Keep header centered when back button is visible */
+  .main:has(.booking-details:not(.remove)) .main-header-left,
+  .main:has(.new-booking-details:not(.remove)) .main-header-left {
+    justify-content: center;
+  }
+
+  /* Adjust text alignment when back button is visible */
+  .main:has(.booking-details:not(.remove)) .main-header-left > div,
+  .main:has(.new-booking-details:not(.remove)) .main-header-left > div {
+    text-align: center;
+  }
+
+  /* Hide moon icon when back button is visible */
+  .main:has(.booking-details:not(.remove)) .moon-line,
+  .main:has(.new-booking-details:not(.remove)) .moon-line {
+    visibility: hidden;
+  }
+
+  /* Hide toggle when tracking modal is active */
+  .main:has(.tracking-modal.active) .mobile-menu-toggle {
+    display: none;
+  }
+}
