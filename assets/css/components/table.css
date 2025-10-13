@@ -380,16 +380,19 @@
   .booking-card-value {
     font-size: 13px;
     color: #111827;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.3;
   }
 
-  /* Cost field - blue color */
-  .booking-card-field:has(.booking-card-label:contains("Cost"))
-    .booking-card-value,
+  /* Shipper and Consignee values - bold */
+  .booking-card-details > .booking-card-field:nth-child(1) .booking-card-value,
+  .booking-card-details > .booking-card-field:nth-child(2) .booking-card-value {
+    font-weight: 600;
+  }
+
+  /* Cost field value - blue color */
   .booking-card-details > .booking-card-field:nth-child(3) .booking-card-value {
     color: var(--primary-blue);
-    font-weight: 700;
   }
 
   .booking-card-payment {
@@ -399,8 +402,11 @@
   }
 
   .booking-card-payment .booking-card-value {
-    font-weight: 600;
     font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 2rem;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
   }
 
   .booking-card-payment-dot {
