@@ -1,51 +1,21 @@
-body {
-  padding: 1rem;
-  @media (max-width: 1024px) {
-    padding: 0;
+/* Tracking Details specific styles - base layout inherited from base.css */
+
+@media (max-width: 1024px) {
+  body {
     overflow: hidden;
     position: fixed;
     width: 100vw;
     height: 100vh;
   }
-}
-.container {
-  height: 100%;
-  display: flex;
-  gap: 2rem;
-  @media (max-width: 768px) {
+
+  .container {
     height: 100vh;
     overflow: hidden;
   }
-}
 
-.main {
-  flex: 1;
-  background-color: var(--bg-white);
-  border-radius: 1rem;
-  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  @media (max-width: 768px) {
-    border-radius: 0;
-    box-shadow: none;
+  .main {
     max-height: 100vh;
   }
-}
-
-.main-header {
-  height: fit-content;
-  padding: 1.5rem;
-  border-bottom: 0.8px solid lightgray;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.main-header .txt-large {
-  text-align: left;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
 }
 
 /* Tracking specific styles */

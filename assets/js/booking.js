@@ -13,7 +13,15 @@ const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.querySelector(".sidebar");
 const sidebarOverlay = document.getElementById("sidebarOverlay");
 
-const handleBackBtnLeft = () => {};
+const handleBackBtnLeft = () => {
+  if (bookingDetails && bookingTable) {
+    bookingDetails.classList.add("remove");
+    bookingTable.classList.remove("remove");
+  }
+
+  if (backBtnLeft) backBtnLeft.classList.add("remove");
+  if (navBtn) navBtn.classList.remove("remove");
+};
 
 const handleNewBookingNextBtn = (e) => {};
 
