@@ -177,6 +177,14 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Close sidebar and remove overlay when resizing to desktop
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1024) {
+    if (sidebar) sidebar.classList.remove("active");
+    if (sidebarOverlay) sidebarOverlay.classList.remove("active");
+  }
+});
+
 // Booking card expand/collapse
 document.querySelectorAll(".booking-card-mobile").forEach((card) => {
   card.addEventListener("click", (e) => {

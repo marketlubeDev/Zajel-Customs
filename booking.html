@@ -1744,68 +1744,26 @@
       let currentSlide = 0;
 
       function showSlide(index) {
-        // Remove active class from all slides and dots
         carouselSlides.forEach(slide => slide.classList.remove('active'));
         carouselDots.forEach(dot => dot.classList.remove('active'));
-
-        // Add active class to current slide and dot
         carouselSlides[index].classList.add('active');
         carouselDots[index].classList.add('active');
-
-        // Move the carousel
         if (carouselContainer) {
           carouselContainer.style.transform = `translateX(-${index * 100}%)`;
         }
-
         currentSlide = index;
       }
 
-      // Add click event to dots
       carouselDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
           showSlide(index);
         });
       });
 
-      // Auto-slide every 5 seconds
       setInterval(() => {
         currentSlide = (currentSlide + 1) % carouselSlides.length;
         showSlide(currentSlide);
       }, 5000);
-
-      // Sidebar Toggle Functionality
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarOverlay = document.getElementById('sidebarOverlay');
-
-      if (menuToggle && sidebar && sidebarOverlay) {
-        menuToggle.addEventListener('click', () => {
-          sidebar.classList.toggle('active');
-          sidebarOverlay.classList.toggle('active');
-        });
-
-        sidebarOverlay.addEventListener('click', () => {
-          sidebar.classList.remove('active');
-          sidebarOverlay.classList.remove('active');
-        });
-
-        document.addEventListener('click', (e) => {
-          if (window.innerWidth <= 1024) {
-            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-              sidebar.classList.remove('active');
-              sidebarOverlay.classList.remove('active');
-            }
-          }
-        });
-
-        // Close sidebar and remove overlay when resizing to desktop
-        window.addEventListener('resize', () => {
-          if (window.innerWidth > 1024) {
-            sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-          }
-        });
-      }
     </script>
     <script src="./assets/js/booking.js"></script>
   </body>
