@@ -61,17 +61,35 @@
             </a>
           </div>
           <div class="sidebar-mid-bottom">
-            <a href="#" class="sidebar-promo-card">
-              <img
-                src="../assets/images/Promo Section.png"
-                alt=""
-                class="sidebar-item__icon"
-              />
-            </a>
+            <div class="carousel-wrapper">
+              <div class="carousel-slides">
+                <a href="#" class="sidebar-promo-card active">
+                  <img
+                    src="../assets/images/Promo Section.png"
+                    alt="Promo 1"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Promo Section.png"
+                    alt="Promo 2"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Promo Section.png"
+                    alt="Promo 3"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+              </div>
+            </div>
             <div class="carousel-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
             </div>
           </div>
         </div>
@@ -1718,6 +1736,77 @@
         </div>
       </main>
     </div>
+    <script>
+      // Sidebar Carousel Functionality
+      const carouselDots = document.querySelectorAll('.carousel-dots .dot');
+      const carouselSlides = document.querySelectorAll('.sidebar-promo-card');
+      const carouselContainer = document.querySelector('.carousel-slides');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        // Remove active class from all slides and dots
+        carouselSlides.forEach(slide => slide.classList.remove('active'));
+        carouselDots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and dot
+        carouselSlides[index].classList.add('active');
+        carouselDots[index].classList.add('active');
+
+        // Move the carousel
+        if (carouselContainer) {
+          carouselContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        currentSlide = index;
+      }
+
+      // Add click event to dots
+      carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-slide every 5 seconds
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % carouselSlides.length;
+        showSlide(currentSlide);
+      }, 5000);
+
+      // Sidebar Toggle Functionality
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+      if (menuToggle && sidebar && sidebarOverlay) {
+        menuToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          sidebarOverlay.classList.toggle('active');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (window.innerWidth <= 1024) {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+              sidebar.classList.remove('active');
+              sidebarOverlay.classList.remove('active');
+            }
+          }
+        });
+
+        // Close sidebar and remove overlay when resizing to desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 1024) {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+          }
+        });
+      }
+    </script>
     <script src="./assets/js/booking.js"></script>
   </body>
 </html>

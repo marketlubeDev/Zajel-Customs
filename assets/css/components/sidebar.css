@@ -39,9 +39,28 @@
   gap: 0.75rem;
 }
 
-.sidebar-promo-card {
+/* Carousel Wrapper */
+.carousel-wrapper {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.sidebar-promo-card {
+  min-width: 100%;
   display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-promo-card.active {
+  opacity: 1;
 }
 
 .sidebar-mid-bottom img {
