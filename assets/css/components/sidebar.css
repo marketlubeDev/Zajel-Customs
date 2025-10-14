@@ -308,6 +308,27 @@
   opacity: 1;
 }
 
+/* Hide overlay and reset sidebar on larger screens */
+@media (min-width: 1025px) {
+  .sidebar-overlay {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  .sidebar-overlay.active {
+    display: none !important;
+  }
+
+  .sidebar {
+    position: static !important;
+    left: auto !important;
+  }
+
+  .sidebar.active {
+    left: auto !important;
+  }
+}
+
 /* Mobile Sidebar Toggle */
 @media (max-width: 1024px) {
   .mobile-menu-toggle {
