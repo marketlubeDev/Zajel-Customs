@@ -731,35 +731,7 @@
         </div>
       </main>
     </div>
-    <script>
-      // Sidebar Carousel Functionality
-      const carouselDots = document.querySelectorAll('.carousel-dots .dot');
-      const carouselSlides = document.querySelectorAll('.sidebar-promo-card');
-      const carouselContainer = document.querySelector('.carousel-slides');
-      let currentSlide = 0;
-
-      function showSlide(index) {
-        carouselSlides.forEach(slide => slide.classList.remove('active'));
-        carouselDots.forEach(dot => dot.classList.remove('active'));
-        carouselSlides[index].classList.add('active');
-        carouselDots[index].classList.add('active');
-        if (carouselContainer) {
-          carouselContainer.style.transform = `translateX(-${index * 100}%)`;
-        }
-        currentSlide = index;
-      }
-
-      carouselDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          showSlide(index);
-        });
-      });
-
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % carouselSlides.length;
-        showSlide(currentSlide);
-      }, 5000);
-    </script>
+    <script src="./assets/js/sidebar.js"></script>
     <script src="./assets/js/new-booking.js"></script>
   </body>
 </html>
