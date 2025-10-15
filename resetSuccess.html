@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/login.css" />
     <link rel="stylesheet" href="../assets/css/components/components.css" />
     <link rel="stylesheet" href="../assets/css/forgotPassword.css" />
-    <title>Forgot Password</title>
+    <title>Password Reset Successful</title>
   </head>
   <body>
     <main class="forgotPassword-container" role="main">
@@ -63,58 +63,28 @@
           </header>
           <section
             class="forgotPassword-form-container"
-            aria-labelledby="forgotPassword-title"
+            aria-labelledby="success-title"
           >
-            <div class="forgotPassword-form-contents-2">
-              <button class="btn back-btn" onclick="history.back()">
-                <img
-                  class="forgotPassword-back-btn-icon"
-                  src="./assets/icons/primaryBack.svg"
-                  alt=""
-                />
-                Back
-              </button>
-            </div>
-            <div class="forgotPassword-form-contents">
-              <h2 class="fancy" id="forgotPassword-title">
-                Forgot your Password
+            <div class="success-form-contents">
+              <h2 class="success-fancy" id="success-title">
+                Your password has been
+                <br />
+                reset successfully.
               </h2>
-              <p class="sub-text">
-                Enter your registered email or username to receive an OTP
-              </p>
-              <form
-                class="forgotPassword-form"
-                action="#"
-                method="post"
-                novalidate
+              <p
+                class="sub-text"
+                style="text-align: center; margin-top: 0.5rem"
               >
-                <div class="forgotPassword-form-input-group">
-                  <div class="form-group">
-                    <label class="form-label" for="username"
-                      >Email address / Username</label
-                    >
-                    <input
-                      type="text"
-                      id="username"
-                      name="username"
-                      class="form-input"
-                      placeholder="Enter your registered email or username"
-                      autocomplete="username"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  class="btn gradient-btn"
-                  href="verifyOTP.html"
-                >
-                  Send OTP
-                </button>
-                <button type="button" class="btn back-btn-login">
-                  Back to Login
-                </button>
-              </form>
+                You can now log in with your new password
+              </p>
+              <button
+                href="login.html"
+                class="btn gradient-btn"
+                role="button"
+                style="margin-top: 1.25rem; width: 100%; text-align: center"
+              >
+                Continue
+              </button>
             </div>
           </section>
         </div>
