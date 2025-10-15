@@ -1,5 +1,28 @@
 /* Booking specific styles - base layout inherited from base.css */
 
+/* New Booking Button Styling */
+.new-booking-btn {
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  width: auto !important;
+}
+
+.new-booking-btn:hover {
+  text-decoration: none !important;
+  transform: translateY(-1px);
+}
+
+.new-booking-btn:focus {
+  text-decoration: none !important;
+  outline: none;
+}
+
 @media (max-width: 1024px) {
   /* Hide toggle and show back button when booking details is visible */
   .main:has(.booking-details:not(.remove)) .mobile-menu-toggle,
