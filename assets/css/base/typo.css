@@ -71,7 +71,7 @@
 }
 @media (max-width: 600px) {
   .fancy {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 400;
   }
   .normal {
