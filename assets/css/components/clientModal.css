@@ -1,0 +1,287 @@
+/* Client Modal Styles */
+.client-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-modal.show {
+  display: flex;
+}
+
+.client-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.client-modal-content {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.client-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  /* margin-bottom: 24px; */
+}
+
+.client-modal-title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.client-title-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.client-id-type-info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.client-modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.client-modal-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.client-modal-status.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.client-modal-status.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.client-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.client-modal-close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.client-modal-body {
+  padding: 0 0 20px 0;
+}
+
+.client-modal-info {
+  margin-bottom: 24px;
+}
+
+.client-id-info {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.client-id-label,
+.client-type-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.client-id-label span,
+.client-type-label span {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Add separator between Client ID and Type */
+.client-id-label::after {
+  content: "|";
+  margin: 0 8px;
+  color: #d1d5db;
+}
+
+.client-modal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.client-modal-section {
+  background: #164b7d14;
+  /* border-radius: 8px; */
+  padding: 5px 20px;
+}
+
+.client-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #164b7d99;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.client-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.client-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.client-info-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.client-info-value {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 500;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .client-modal-content {
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .client-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .client-id-info {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .client-modal-content {
+    width: 70%;
+    max-width: 800px;
+  }
+
+  .client-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .client-modal-content {
+    width: 95%;
+    max-height: 96vh;
+  }
+
+  .client-modal-header {
+    padding: 16px 16px 0 16px;
+    /* margin-bottom: 16px; */
+  }
+
+  .client-modal-body {
+    padding: 0;
+  }
+
+  .client-modal-title {
+    font-size: 20px;
+  }
+
+  .client-modal-section {
+    padding: 16px;
+  }
+
+  .client-id-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Action icon hover effects */
+.action-icon {
+  transition: all 0.2s ease;
+}
+
+.action-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.view-client-btn:hover {
+  filter: brightness(1.2);
+}
+
+.manage-users-btn:hover {
+  filter: brightness(1.2);
+}

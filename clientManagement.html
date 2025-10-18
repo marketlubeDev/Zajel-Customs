@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Management</title>
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typo.css" />
+    <link rel="stylesheet" href="../assets/css/base/buttons.css" />
+    <link rel="stylesheet" href="../assets/css/booking.css" />
+    <link rel="stylesheet" href="../assets/css/components/components.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/table.css" />
+    <link rel="stylesheet" href="../assets/css/components/searchbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/trackingModal.css" />
+    <link rel="stylesheet" href="../assets/css/components/clientModal.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/booking-details.css"
+    />
+    <link rel="stylesheet" href="./assets/css/components/progress.css" />
+  </head>
+  <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="sidebar-top">
+          <img src="../assets/images/Logo.svg" alt="logo" />
+        </div>
+        <div
+          class="sidebar-mid"
+          data-name="Sidebar Items [Sidebar] [1.0]"
+          data-node-id="1878:13648"
+        >
+          <div class="sidebar-mid-top">
+            <h4>Main Menu</h4>
+            <a class="sidebar-item" href="./booking.html">
+              <img
+                src="../assets/icons/booking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Booking</span>
+            </a>
+            <a class="sidebar-item" href="./tracking.html">
+              <img
+                src="../assets/icons/tracking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Tracking</span>
+            </a>
+            <a class="sidebar-item" href="./savedAddresses.html">
+              <img
+                src="../assets/icons/save-address.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Saved address</span>
+            </a>
+          </div>
+          <div class="sidebar-mid-top">
+            <h4>Admin</h4>
+            <a class="sidebar-item nav-effect" href="./clientManagement.html">
+              <img
+                src="../assets/icons/booking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Client management</span>
+            </a>
+            <a class="sidebar-item" href="./clientManagement.html">
+              <img
+                src="../assets/icons/tracking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Reports</span>
+            </a>
+          </div>
+          <div class="sidebar-mid-bottom">
+            <div class="carousel-wrapper">
+              <div class="carousel-slides">
+                <a href="#" class="sidebar-promo-card active">
+                  <img
+                    src="../assets/images/Promo Section.png"
+                    alt="Promo 1"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Landair.png"
+                    alt="Promo 2"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Zajelapp.png"
+                    alt="Promo 3"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <div
+            class="profile-card"
+            data-name="User Profile Card [Sidebar] [1.0]"
+            data-node-id="1878:13663"
+          >
+            <div class="profile-user">
+              <div class="profile-avatar" data-name="Avatar [1.0]">
+                <img
+                  src="../assets/417942d6127e1fbb599aef872e60492af4afa107.png"
+                  alt=""
+                />
+              </div>
+              <div class="profile-text">
+                <div class="profile-name-row">
+                  <span class="form-label">Arthur Taylor</span>
+                  <img
+                    class="profile-verified"
+                    src="../assets/e2950f05c4b6e0c4175c2455ef91f1f9ab2ac466.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="txt-small">arthur@zajelnow.com</span>
+              </div>
+            </div>
+            <button class="profile-compact-btn" aria-label="Open profile menu">
+              <img
+                src="../assets/cfea062004ae840ffe59aecffeb334c7024b18d7.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <header class="main-header">
+          <button
+            class="mobile-menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="main-header-left">
+            <div class="back-btn-left remove">
+              <img src="./assets/icons/back.svg" />
+            </div>
+            <div class="nav-btn">
+              <img src="./assets/icons/notification-mobile.svg" />
+            </div>
+            <div>
+              <h2 class="txt-large">Client Management</h2>
+              <span class="nav-txt-low txt-low-mid"
+                >View and manage your clients easily</span
+              >
+            </div>
+          </div>
+          <button class="moon-line">
+            <img src="../assets/icons/moon-line.svg" alt="" />
+          </button>
+        </header>
+
+        <!-- default section -->
+        <section class="booking-table">
+          <div class="table-filter-container">
+            <div class="table-filter">
+              <!-- search bar -->
+              <div class="address-search">
+                <span class="search-icon">
+                  <img src="../assets/icons/Search Icon.svg" alt="" />
+                </span>
+                <input
+                  type="text"
+                  class="form-input search-input"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <span class="search-shortcut">⌘1</span>
+              </div>
+              <!-- Mobile filter button -->
+              <button class="table-filter-mobile-btn" aria-label="Filter">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M16.75 4V5.5H16L12.25 11.125V17.5H7.75V11.125L4 5.5H3.25V4H16.75ZM5.803 5.5L9.25 10.6705V16H10.75V10.6705L14.197 5.5H5.803Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="table-filter-right">
+              <div class="table-sort" role="button" aria-label="Sort options">
+                <img src="./assets/icons/filter.svg" alt="" />
+                <span class="table-sort-label">Recently added</span>
+                <img src="./assets/icons/dropdown.svg" alt="" />
+              </div>
+              <div class="table-sort-menu" role="menu" aria-hidden="true">
+                <button class="table-sort-option" data-value="recent">
+                  Recently added
+                </button>
+                <button class="table-sort-option" data-value="name-asc">
+                  Name A–Z
+                </button>
+                <button class="table-sort-option" data-value="name-desc">
+                  Name Z–A
+                </button>
+                <button class="table-sort-option" data-value="oldest">
+                  Oldest first
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table-head">
+              <div class="txt-small width">
+                <span>Client name</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span>Contact person</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span>Email</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span>No. of users</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span>City</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span>Status</span>
+                <img
+                  src="./assets/icons/dropdown.svg"
+                  alt=""
+                  style="margin-left: 4px; width: 12px; height: 12px"
+                />
+              </div>
+              <div class="txt-small width">
+                <span></span>
+              </div>
+            </div>
+            <!-- table body -->
+            <div class="table-body">
+              <!-- Client Row 1 -->
+              <div class="table-body-row">
+                <div class="table-body-row-cell">
+                  <div>
+                    <div style="font-weight: bold">APEX RECYCLABLES FZE</div>
+                    <div style="font-size: 12px; color: #666">Credit</div>
+                  </div>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>Mr. Valtine Pinto</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>logistics@apexrecyclables.com</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>1</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span>DXB</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <span class="status-badge active">Active</span>
+                </div>
+                <div class="table-body-row-cell">
+                  <img
+                    src="./assets/icons/eye-line.svg"
+                    class="action-icon view-client-btn"
+                    data-client-id="24103"
+                    data-client-name="APEX RECYCLABLES FZE"
+                    data-client-type="Credit"
+                    data-client-status="Active"
+                    data-contact-person="Mr. Valtine Pinto"
+                    data-email="logistics@apexrecyclables.com"
+                    data-phone="+971 4359 1881"
+                    data-street-address="Office No 609 Makateb Building, Behind Nissan Showroom, Opp Dnata Office, Deira"
+                    data-city="Dubai (DXB)"
+                    data-country="UAE"
+                    data-zone="A1"
+                    style="
+                      transform: rotate(180deg);
+                      width: 16px;
+                      height: 16px;
+                      cursor: pointer;
+                    "
+                    alt="View"
+                  />
+                  <img
+                    src="./assets/icons/Team.svg"
+                    class="action-icon manage-users-btn"
+                    data-client-id="24103"
+                    data-client-name="APEX RECYCLABLES FZE"
+                    style="
+                      width: 16px;
+                      height: 16px;
+                      cursor: pointer;
+                      margin-left: 8px;
+                    "
+                    alt="Manage Users"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="table-pagination"
+            data-name="Title"
+            data-node-id="2108:18962"
+          >
+            <div class="pagination-left">
+              <span class="txt-low-mid">Rows per page</span>
+              <div
+                class="rows-per-page"
+                data-name="Rows Per Page Dropdown"
+                data-node-id="2108:18965"
+              >
+                <select aria-label="Rows per page">
+                  <option selected>9</option>
+                  <option>10</option>
+                  <option>20</option>
+                  <option>50</option>
+                </select>
+                <span class="chevron" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div
+              class="pagination-right"
+              data-name="Pagination Controls"
+              data-node-id="2108:18969"
+            >
+              <div
+                class="showing"
+                data-name="Showing Text"
+                data-node-id="2108:18970"
+              >
+                <span class="txt-low-mid">Showing</span>
+                <span
+                  class="page-chip"
+                  data-name="Current Page Number"
+                  data-node-id="2108:18972"
+                  >1</span
+                >
+                <span class="txt-low-mid">of 20 pages</span>
+              </div>
+              <div
+                class="page-nav"
+                data-name="Page Navigation"
+                data-node-id="2108:18975"
+              >
+                <button
+                  class="nav-arrow prev"
+                  aria-label="Previous page"
+                ></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="nav-arrow next" aria-label="Next page"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Booking Cards -->
+          <div class="booking-cards-container">
+            <!-- Booking Card 1 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status in-progress">In Progress</div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.55.00</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot failed"></span>
+                    <span class="booking-card-value">Failed</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Expanded content -->
+              <div class="booking-card-expanded">
+                <div class="booking-card-route">
+                  <div class="booking-card-label">Route</div>
+                  <div class="booking-route-path">
+                    <span class="route-location">DXB</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="12"
+                      viewBox="0 0 16 12"
+                      fill="none"
+                    >
+                      <path
+                        d="M14.5 5.99944H1.5M14.5 5.99944L9.16677 1.5M14.5 5.99944L9.16666 10.5"
+                        stroke="black"
+                        stroke-opacity="0.54"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="route-location">DXB</span>
+                  </div>
+                </div>
+                <div class="booking-card-actions">
+                  <a href="#" class="view-details-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1H13M13 1V13M13 1L1 13"
+                        stroke="#164B7D"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    View details
+                  </a>
+                  <div class="booking-card-icons">
+                    <button
+                      class="icon-btn booking-location-btn"
+                      aria-label="Location"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="18"
+                        viewBox="0 0 16 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.25736 16.4936C8.92015 16.8184 8.46932 17 8.00013 17C7.53095 17 7.08019 16.8184 6.74291 16.4936C3.6543 13.5008 -0.484811 10.1575 1.53371 5.30373C2.6251 2.67933 5.24494 1 8.00013 1C10.7554 1 13.3752 2.67933 14.4666 5.30373C16.4826 10.1514 12.3536 13.5111 9.25736 16.4936Z"
+                          stroke="#164B7D"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M10.7212 8.2C10.7212 9.7464 9.50257 11 7.99928 11C6.49599 11 5.27734 9.7464 5.27734 8.2C5.27734 6.6536 6.49599 5.4 7.99928 5.4C9.50257 5.4 10.7212 6.6536 10.7212 8.2Z"
+                          stroke="#164B7D"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Settings">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M5.28317 13.8C3.58467 13.8 2.73543 13.8 2.13079 13.4374C1.73563 13.2005 1.41727 12.8617 1.2118 12.4594C0.897434 11.8438 0.981938 11.0298 1.15095 9.402C1.29203 8.04312 1.36257 7.36364 1.70947 6.86465C1.93723 6.53703 2.24527 6.26851 2.60638 6.08282C3.15639 5.8 3.86531 5.8 5.28317 5.8H12.7168C14.1347 5.8 14.8436 5.8 15.3936 6.08282C15.7547 6.26851 16.0628 6.53703 16.2906 6.86465C16.6374 7.36364 16.708 8.04312 16.849 9.402C17.0181 11.0298 17.1026 11.8438 16.7882 12.4594C16.5827 12.8617 16.2644 13.2005 15.8692 13.4374C15.2646 13.8 14.4154 13.8 12.7168 13.8M13 5.8V4.2C13 2.6915 13 1.93726 12.5314 1.46863C12.0627 1 11.3085 1 9.8 1H8.2C6.69151 1 5.93726 1 5.46863 1.46863C5 1.93726 5 2.6915 5 4.2V5.8M13.8 9H13.8072M10.591 12.2H7.40904C6.86082 12.2 6.5867 12.2 6.35347 12.2871C6.04249 12.4032 5.77621 12.6288 5.59696 12.9279C5.46252 13.1523 5.39604 13.4409 5.26307 14.0179C5.05531 14.9196 4.95143 15.3704 5.02207 15.7319C5.11628 16.2139 5.4099 16.6219 5.81802 16.8379C6.12411 17 6.55242 17 7.40904 17H10.591C11.4476 17 11.8759 17 12.182 16.8379C12.5901 16.6219 12.8838 16.2139 12.9779 15.7319C13.0486 15.3704 12.9447 14.9196 12.737 14.0179C12.604 13.4409 12.5374 13.1523 12.403 12.9279C12.2238 12.6288 11.9575 12.4032 11.6466 12.2871C11.4133 12.2 11.1392 12.2 10.591 12.2Z"
+                          stroke="#164B7D"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 2 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status completed">Completed</div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Layla</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Fujairah customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 44.50</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot approved"></span>
+                    <span class="booking-card-value">Approved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 3 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000004</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status drafted">Drafted</div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.10</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot pending"></span>
+                    <span class="booking-card-value">Pending</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Card 4 -->
+            <div class="booking-card-mobile">
+              <div class="booking-card-header">
+                <div>
+                  <div class="booking-card-id">ZFZ25091000014</div>
+                  <div class="booking-card-type">Document</div>
+                </div>
+                <div class="booking-card-header-right">
+                  <div class="booking-card-status completed">Completed</div>
+                  <div class="booking-card-dropdown">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="booking-card-details">
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Shipper</div>
+                  <div class="booking-card-value">Sufiyan</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Consignee</div>
+                  <div class="booking-card-value">Dubai customs</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Cost</div>
+                  <div class="booking-card-value">AED 23.55.00</div>
+                </div>
+                <div class="booking-card-field">
+                  <div class="booking-card-label">Payment status</div>
+                  <div class="booking-card-payment">
+                    <span class="booking-card-payment-dot approved"></span>
+                    <span class="booking-card-value">Approved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Action Buttons -->
+          <div class="booking-mobile-actions">
+            <button class="export-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="18"
+                viewBox="0 0 19 18"
+                fill="none"
+              >
+                <path
+                  d="M1.5 11.1053V7.73684C1.5 4.56106 1.5 2.97318 2.48659 1.98659C3.47318 1 5.06106 1 8.23684 1H10.7632C13.9389 1 15.5269 1 16.5134 1.98659C17.5 2.97318 17.5 4.56106 17.5 7.73684V11.1053M12.0263 11.1053C12.0263 11.1053 10.1657 13.6315 9.5 13.6315C8.83423 13.6316 6.97368 11.1052 6.97368 11.1052M9.5 13.2105V7.73684M11.1842 17H7.81579C5.04739 17 3.66318 17 2.73152 16.2354C2.56096 16.0954 2.40457 15.939 2.2646 15.7685C1.5 14.8368 1.5 13.4526 1.5 10.6842C1.5 7.91579 1.5 6.5316 2.2646 5.59994C2.40457 5.42938 2.56096 5.27299 2.73152 5.13302C3.66318 4.36842 5.04739 4.36842 7.81579 4.36842H11.1842C13.9526 4.36842 15.3368 4.36842 16.2685 5.13302C16.439 5.27299 16.5954 5.42938 16.7354 5.59994C17.5 6.5316 17.5 7.91579 17.5 10.6842C17.5 13.4526 17.5 14.8368 16.7354 15.7685C16.5954 15.939 16.439 16.0954 16.2685 16.2354C15.3368 17 13.9526 17 11.1842 17Z"
+                  stroke="#164B7D"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Export as PDF
+            </button>
+            <a
+              href="./new-booking.html"
+              class="btn gradient-btn new-booking-btn"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M8 3V13M3 8H13"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              New Booking
+            </a>
+          </div>
+        </section>
+
+        <section class="booking-details remove">
+          <div class="booking-scrollable">
+            <!-- first box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Shipping Details</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- second box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Shipper Info</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- second box -->
+            <div class="booking-box">
+              <div class="booking-box-head txt-mid">Cosengee info</div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Basic Details</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Product Type</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">References</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Document Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type"
+                      >Additional Reference No.</label
+                    >
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="booking-box-body">
+                <div class="booking-box-body-head">
+                  <h3 class="form-label">Package Info</h3>
+                </div>
+                <div class="booking-box-body-content">
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Pieces</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Weight</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Length</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Width</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="form-label" for="product-type">Height</label>
+                    <input
+                      type="text"
+                      id="product-type"
+                      name="product-type"
+                      class="form-input"
+                      placeholder="Document"
+                      autocomplete="product-type"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Action Bar from Figma -->
+            <div
+              class="booking-action-bar"
+              data-name="Title"
+              data-node-id="1878:16183"
+            >
+              <button class="cancel-link" aria-label="Cancel changes">
+                <span class="cancel-icon" aria-hidden="true">×</span>
+                Cancel
+              </button>
+              <div class="action-right">
+                <button class="btn outline-btn" aria-label="Save changes">
+                  Save changes
+                </button>
+                <button
+                  class="btn gradient-btn paynow-btn"
+                  aria-label="Pay now"
+                >
+                  Pay now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Client Details Modal -->
+        <div class="client-modal" id="clientModal">
+          <div class="client-modal-overlay" id="clientModalOverlay"></div>
+          <div class="client-modal-content">
+            <div class="client-modal-header">
+              <div class="client-modal-title-section">
+                <div class="client-title-info">
+                  <h2 class="client-modal-title" id="clientModalTitle">
+                    APEX RECYCLABLES FZE
+                    <span
+                      class="client-modal-status active"
+                      id="clientModalStatus"
+                      >Active</span
+                    >
+                  </h2>
+                  <div class="client-id-type-info">
+                    <span class="client-id-label"
+                      >Client ID: <span id="clientModalId">24103</span></span
+                    >
+                    <span class="client-type-label"
+                      >Type: <span id="clientModalType">Credit</span></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button class="client-modal-close" id="clientModalClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="client-modal-body">
+              <div class="client-modal-sections">
+                <div class="client-modal-section">
+                  <h3 class="client-section-title">ACCOUNT INFO</h3>
+                </div>
+                <div class="client-info-grid">
+                  <div class="client-info-item">
+                    <span class="client-info-label">Contact person</span>
+                    <span class="client-info-value" id="clientContactPerson"
+                      >Mr. Valtine Pinto</span
+                    >
+                  </div>
+                  <div class="client-info-item">
+                    <span class="client-info-label">Email</span>
+                    <span class="client-info-value" id="clientEmail"
+                      >logistics@apexrecyclables.com</span
+                    >
+                  </div>
+                  <div class="client-info-item">
+                    <span class="client-info-label">Phone</span>
+                    <span class="client-info-value" id="clientPhone"
+                      >+971 4359 1881</span
+                    >
+                  </div>
+                </div>
+                <div class="client-modal-section">
+                  <h3 class="client-section-title">ADDRESS INFO</h3>
+                </div>
+                <div class="client-info-grid">
+                  <div class="client-info-item">
+                    <span class="client-info-label">Street address</span>
+                    <span class="client-info-value" id="clientStreetAddress"
+                      >Office No 609 Makateb Building, Behind Nissan Showroom,
+                      Opp Dnata Office, Deira</span
+                    >
+                  </div>
+                  <div class="client-info-item">
+                    <span class="client-info-label">City</span>
+                    <span class="client-info-value" id="clientCity"
+                      >Dubai (DXB)</span
+                    >
+                  </div>
+                  <div class="client-info-item">
+                    <span class="client-info-label">Country</span>
+                    <span class="client-info-value" id="clientCountry"
+                      >UAE</span
+                    >
+                  </div>
+                  <div class="client-info-item">
+                    <span class="client-info-label">Zone</span>
+                    <span class="client-info-value" id="clientZone">A1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tracking Modal -->
+        <div class="tracking-modal" id="trackingModal">
+          <div class="tracking-modal-overlay" id="trackingModalOverlay"></div>
+          <div class="tracking-modal-content">
+            <div class="tracking-modal-header">
+              <button
+                class="tracking-modal-back"
+                id="trackingModalBack"
+                aria-label="Go back"
+              >
+                <img src="./assets/icons/back.svg" alt="Back" />
+              </button>
+              <h2 class="tracking-modal-title-mobile">Tracking</h2>
+              <button class="tracking-modal-close" id="trackingModalClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="tracking-modal-info">
+              <div class="tracking-modal-header-content">
+                <span class="status-label">Track package</span>
+                <h3 class="tracking-modal-awb">ZFZ25091000002</h3>
+              </div>
+            </div>
+
+            <div class="tracking-modal-status">
+              <div class="status-info-modal">
+                <span class="status-label">Current status</span>
+                <h3 class="tracking-modal-awb">Arrived at destination hub</h3>
+                <span class="status-label"
+                  >Last updated on 22 Sep 2025, Friday</span
+                >
+              </div>
+
+              <div class="status-delivery-modal">
+                <span class="status-label">Estimated delivery</span>
+                <span class="tracking-modal-awb">20 Sep 2025</span>
+              </div>
+            </div>
+
+            <div class="tracking-modal-timeline">
+              <div class="timeline-item-v completed">
+                <div class="timeline-marker-v">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">In transit</span>
+                    <span class="status-label">Departed from Frankfurt</span>
+                  </div>
+                  <span class="status-label">15 Sep 2025 03:15 PM</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v completed">
+                <div class="timeline-marker-v">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Arrival at destination</span>
+                    <span class="status-label">Arrived in New York, USA</span>
+                  </div>
+                  <span class="status-label">16 Sep 2025 11:30 AM</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Departure confirmed</span>
+                    <span class="status-label"
+                      >Leaving Frankfurt for New York</span
+                    >
+                  </div>
+                  <span class="status-label">Estimated: 18 Sep 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Out for delivery</span>
+                    <span class="status-label"
+                      >On the way to final address</span
+                    >
+                  </div>
+                  <span class="status-label">Estimated: 15 Sep 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-item-v pending">
+                <div class="timeline-marker-v"></div>
+                <div class="timeline-content-v">
+                  <div class="timeline-left-v">
+                    <span class="timeline-title-v">Customs clearance</span>
+                  </div>
+                  <span class="status-label">Estimated: 20 Sep 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/booking.js"></script>
+    <script src="./assets/js/clientModal.js"></script>
+  </body>
+</html>
