@@ -70,6 +70,12 @@
   background: #ffffff;
   color: #374151;
   cursor: pointer;
+  height: 40px; /* ensure same height as date inputs on desktop */
+  line-height: 20px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form-select:focus {
@@ -92,6 +98,9 @@
   background: #ffffff;
   color: #374151;
   flex: 1;
+  height: 40px; /* align with select height */
+  line-height: 20px;
+  box-sizing: border-box;
 }
 
 .date-input:focus {
@@ -137,18 +146,79 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .report-controls {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .report-title {
+    font-size: 20px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-bottom: 20px;
   }
 
   .date-range-container {
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .date-input {
+    width: 100%;
+    min-width: 0;
   }
 
   .date-separator {
     text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 4px 0;
+  }
+
+  .form-actions {
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .btn-generate {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .report-controls {
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .report-title {
+    font-size: 18px;
+  }
+
+  .report-description {
+    font-size: 13px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-select,
+  .date-input {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .btn-generate {
+    padding: 16px 20px;
+    font-size: 16px;
   }
 }
 
