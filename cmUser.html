@@ -254,8 +254,12 @@
                 >
                   <img src="./assets/icons/paintboard.svg" alt="" />
                 </button>
-                <button class="view-toggle-btn active" data-view="list" aria-label="List view">
-                  <img src="./assets/icons/removeactive.svg" alt="" />
+                <button
+                  class="view-toggle-btn active"
+                  data-view="list"
+                  aria-label="List view"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <rect
                       x="1"
                       y="2"
@@ -313,122 +317,295 @@
 
               <!-- Create New User Button -->
               <button class="create-user-btn">
-<img src="./assets/icons/AddUserIcon.svg" alt="">
+                <img src="./assets/icons/AddUserIcon.svg" alt="" />
                 <span>Create new user</span>
               </button>
             </div>
           </div>
-          <div class="table">
-            <div class="table-head">
-              <div class="txt-small width">
-                <span>Name</span>
-                <img
-                  src="./assets/icons/updown.svg"
-                  alt=""
-                  style="margin-left: 4px; width: 12px; height: 12px"
-                />
+          <div class="table-container list-view">
+            <div class="table">
+              <div class="table-head">
+                <div class="txt-small width">
+                  <span>Name</span>
+                  <img
+                    src="./assets/icons/updown.svg"
+                    alt=""
+                    style="margin-left: 4px; width: 12px; height: 12px"
+                  />
+                </div>
+                <div class="txt-small width">
+                  <span>Email</span>
+                  <img
+                    src="./assets/icons/updown.svg"
+                    alt=""
+                    style="margin-left: 4px; width: 12px; height: 12px"
+                  />
+                </div>
+                <div class="txt-small width">
+                  <span>Logged status</span>
+                  <img
+                    src="./assets/icons/updown.svg"
+                    alt=""
+                    style="margin-left: 4px; width: 12px; height: 12px"
+                  />
+                </div>
+                <div class="txt-small width">
+                  <span>Status</span>
+                  <img
+                    src="./assets/icons/updown.svg"
+                    alt=""
+                    style="margin-left: 4px; width: 12px; height: 12px"
+                  />
+                </div>
+                <div class="txt-small width">
+                  <span>Last updated on</span>
+                  <img
+                    src="./assets/icons/updown.svg"
+                    alt=""
+                    style="margin-left: 4px; width: 12px; height: 12px"
+                  />
+                </div>
+                <div class="txt-small width">
+                  <span></span>
+                </div>
               </div>
-              <div class="txt-small width">
-                <span>Email</span>
-                <img
-                  src="./assets/icons/updown.svg"
-                  alt=""
-                  style="margin-left: 4px; width: 12px; height: 12px"
-                />
-              </div>
-              <div class="txt-small width">
-                <span>Logged status</span>
-                <img
-                src="./assets/icons/updown.svg"
-
-                  alt=""
-                  style="margin-left: 4px; width: 12px; height: 12px"
-                />
-              </div>
-              <div class="txt-small width">
-                <span>Status</span>
-                <img
-                src="./assets/icons/updown.svg"
-
-                  alt=""
-                  style="margin-left: 4px; width: 12px; height: 12px"
-                />
-              </div>
-              <div class="txt-small width">
-                <span>Last updated on</span>
-                <img
-                src="./assets/icons/updown.svg"
-
-                  alt=""
-                  style="margin-left: 4px; width: 12px; height: 12px"
-                />
-              </div>
-              <div class="txt-small width">
-                <span></span>
+              <!-- table body -->
+              <div class="table-body">
+                <!-- User Row 1 -->
+                <div class="table-body-row">
+                  <div class="table-body-row-cell">
+                    <div class="user-name-cell">
+                      <div class="user-name">Clover Moon</div>
+                      <div class="user-username">@starry.clover</div>
+                    </div>
+                  </div>
+                  <div class="table-body-row-cell">
+                    <span>clover.moon@apexrecyclables.com</span>
+                  </div>
+                  <div class="table-body-row-cell">
+                    <div class="logged-status">
+                      <span class="status-dot online"></span>
+                      <span>Online</span>
+                    </div>
+                  </div>
+                  <div class="table-body-row-cell">
+                    <span class="status-badge active">Active</span>
+                  </div>
+                  <div class="table-body-row-cell">
+                    <span>02:17 AM, 14/04/2024</span>
+                  </div>
+                  <div class="table-body-row-cell">
+                    <div class="action-buttons">
+                      <button class="action-btn refresh-btn" title="Refresh">
+                        <img src="./assets/icons/lock.svg" alt="" />
+                      </button>
+                      <button class="action-btn more-btn" title="More options">
+                        <img src="./assets/icons/threedot.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- table body -->
-            <div class="table-body">
-              <!-- User Row 1 -->
-              <div class="table-body-row">
-                <div class="table-body-row-cell">
-                  <div class="user-name-cell">
-                    <div class="user-name">Clover Moon</div>
-                    <div class="user-username">@starry.clover</div>
+
+            <!-- Grid/Card View Container -->
+            <div class="user-grid-container">
+              <div class="user-grid-wrapper">
+                <!-- User Card 1 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle active"></div>
+                    <span class="user-card-toggle-label active">Active</span>
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        Luna Bright
+                        <div class="user-card-logged-status online">
+                          <span class="status-dot online"></span>
+                          <span>Online</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@luna.bright</div>
+                      <div class="user-card-email">luna.bright@example.com</div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
+                    </button>
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/15/25, 10:45 AM
+                    </div>
                   </div>
                 </div>
-                <div class="table-body-row-cell">
-                  <span>clover.moon@apexrecyclables.com</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <div class="logged-status">
-                    <span class="status-dot online"></span>
-                    <span>Online</span>
+
+                <!-- User Card 2 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle"></div>
+                    <span class="user-card-toggle-label inactive"
+                      >Inactive</span
+                    >
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        Marcus Chen
+                        <div class="user-card-logged-status offline">
+                          <span class="status-dot offline"></span>
+                          <span>Offline</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@marcus.chen</div>
+                      <div class="user-card-email">marcus.chen@example.com</div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
+                    </button>
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/14/25, 3:22 PM
+                    </div>
                   </div>
                 </div>
-                <div class="table-body-row-cell">
-                  <span class="status-badge active">Active</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <span>02:17 AM, 14/04/2024</span>
-                </div>
-                <div class="table-body-row-cell">
-                  <div class="action-buttons">
-                    <button class="action-btn refresh-btn" title="Refresh">
-                      <img src="./assets/icons/lock.svg" alt="" />
-                        <path
-                          d="M1.333 8.667A6.667 6.667 0 0 1 8 2a6.667 6.667 0 0 1 6.667 6.667"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M14.667 7.333A6.667 6.667 0 0 1 8 14a6.667 6.667 0 0 1-6.667-6.667"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M5.333 8.667L1.333 8.667L1.333 4.667"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M10.667 7.333L14.667 7.333L14.667 11.333"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
+
+                <!-- User Card 3 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle active"></div>
+                    <span class="user-card-toggle-label active">Active</span>
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        Sofia Rodriguez
+                        <div class="user-card-logged-status online">
+                          <span class="status-dot online"></span>
+                          <span>Online</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@sofia.rodriguez</div>
+                      <div class="user-card-email">
+                        sofia.rodriguez@example.com
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
                     </button>
-                    <button class="action-btn more-btn" title="More options">
-                      <img src="./assets/icons/threedot.svg" alt="" />
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/15/25, 8:30 AM
+                    </div>
+                  </div>
+                </div>
+
+                <!-- User Card 4 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle"></div>
+                    <span class="user-card-toggle-label inactive"
+                      >Inactive</span
+                    >
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        David Kim
+                        <div class="user-card-logged-status offline">
+                          <span class="status-dot offline"></span>
+                          <span>Offline</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@david.kim</div>
+                      <div class="user-card-email">david.kim@example.com</div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
                     </button>
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/13/25, 11:15 PM
+                    </div>
+                  </div>
+                </div>
+
+                <!-- User Card 5 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle active"></div>
+                    <span class="user-card-toggle-label active">Active</span>
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        Emma Thompson
+                        <div class="user-card-logged-status online">
+                          <span class="status-dot online"></span>
+                          <span>Online</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@emma.thompson</div>
+                      <div class="user-card-email">
+                        emma.thompson@example.com
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
+                    </button>
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/15/25, 1:45 PM
+                    </div>
+                  </div>
+                </div>
+
+                <!-- User Card 6 -->
+                <div class="user-card">
+                  <div class="user-card-status-toggle">
+                    <div class="user-card-toggle"></div>
+                    <span class="user-card-toggle-label inactive"
+                      >Inactive</span
+                    >
+                  </div>
+
+                  <div class="user-card-header">
+                    <div class="user-card-info">
+                      <div class="user-card-name">
+                        Alex Johnson
+                        <div class="user-card-logged-status offline">
+                          <span class="status-dot offline"></span>
+                          <span>Offline</span>
+                        </div>
+                      </div>
+                      <div class="user-card-username">@alex.johnson</div>
+                      <div class="user-card-email">
+                        alex.johnson@example.com
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-card-footer">
+                    <button class="user-card-change-password">
+                      Change password
+                    </button>
+                    <div class="user-card-last-updated">
+                      Last updated on<br />9/12/25, 6:20 AM
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1490,5 +1667,6 @@
     <script src="./assets/js/sidebar.js"></script>
     <script src="./assets/js/booking.js"></script>
     <script src="./assets/js/clientModal.js"></script>
+    <script src="./assets/js/viewToggle.js"></script>
   </body>
 </html>
