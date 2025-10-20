@@ -1736,6 +1736,108 @@
             </div>
           </div>
         </div>
+
+        <!-- Add New User Modal -->
+        <div class="add-user-modal" id="addUserModal">
+          <div class="add-user-modal-overlay" id="addUserModalOverlay"></div>
+          <div class="add-user-modal-content">
+            <div class="add-user-modal-header">
+              <h2 class="add-user-modal-title">Add new user</h2>
+              <button class="add-user-modal-close" id="addUserModalClose">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="add-user-modal-body">
+              <form class="add-user-form" id="addUserForm">
+                <!-- ACCOUNT INFO Section -->
+                <div class="form-section">
+                  <h3 class="form-section-title">ACCOUNT INFO</h3>
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      class="form-input"
+                      placeholder="Enter full name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      class="form-input"
+                      placeholder="Enter email address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- LOGIN CREDENTIAL Section -->
+                <div class="form-section">
+                  <h3 class="form-section-title">LOGIN CREDENTIAL</h3>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="Enter email address"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-input"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmPassword" class="form-label"
+                      >Confirm password</label
+                    >
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      class="form-input"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="add-user-modal-actions">
+              <button type="button" class="btn cancel-btn" id="addUserCancel">
+                Cancel
+              </button>
+              <button type="submit" class="btn create-btn" form="addUserForm">
+                Create user
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script src="./assets/js/sidebar.js"></script>
@@ -1743,5 +1845,6 @@
     <script src="./assets/js/clientModal.js"></script>
     <script src="./assets/js/viewToggle.js"></script>
     <script src="./assets/js/changePasswordModal.js"></script>
+    <script src="./assets/js/addUserModal.js"></script>
   </body>
 </html>
