@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addUserCancel = document.getElementById("addUserCancel");
   const addUserForm = document.getElementById("addUserForm");
   const createUserBtn = document.querySelector(".create-user-btn");
+  const createUserBtnMobile = document.querySelector(".create-user-btn-mobile");
 
   // Form elements
   const firstNameInput = document.getElementById("firstName");
@@ -196,6 +197,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listeners
   if (createUserBtn) {
     createUserBtn.addEventListener("click", openAddUserModal);
+  }
+  
+  if (createUserBtnMobile) {
+    createUserBtnMobile.addEventListener("click", openAddUserModal);
   }
 
   if (addUserModalClose) {

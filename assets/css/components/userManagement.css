@@ -1198,13 +1198,27 @@
 }
 
 @media (max-width: 768px) {
+  /* MOBILE: Hide table, show cards only */
+  .table-container.list-view .table {
+    display: none !important;
+  }
+  
+  .table-container.list-view .user-grid-container {
+    display: flex !important;
+  }
+  
+  /* Hide pagination on mobile */
+  .table-pagination {
+    display: none !important;
+  }
+  
   .user-grid-wrapper {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .user-grid-container {
-    padding: 16px 0;
+    padding: 16px 12px 100px 12px;
   }
 
   .user-card {
@@ -1522,7 +1536,7 @@
   }
 
   .add-user-modal-body {
-    padding: 12px 20px 20px 20px;
+    padding: 0;
   }
 
   .add-user-modal-title {
@@ -1577,5 +1591,59 @@
   .add-user-modal-close:hover {
     background-color: #f3f4f6;
     color: #374151;
+  }
+}
+
+/* Mobile Create User Button at Bottom */
+.mobile-create-user-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-create-user-btn {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    padding: 12px 16px;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .mobile-create-user-btn button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+    background: var(
+      --Primary-gradient,
+      radial-gradient(95.47% 95.47% at 62.5% 93.18%, #5192e2 3.89%, #164b7d 100%)
+    );
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .mobile-create-user-btn button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Hide desktop create button on mobile */
+  .table-filter-right .create-user-btn {
+    display: none !important;
+  }
+  
+  /* Hide view toggle on mobile */
+  .view-toggle-container {
+    display: none !important;
   }
 }
