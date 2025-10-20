@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports</title>
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/base/variables.css" />
+    <link rel="stylesheet" href="../assets/css/base/typo.css" />
+    <link rel="stylesheet" href="../assets/css/base/buttons.css" />
+    <link rel="stylesheet" href="../assets/css/booking.css" />
+    <link rel="stylesheet" href="../assets/css/components/components.css" />
+    <link rel="stylesheet" href="../assets/css/components/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/components/table.css" />
+    <link rel="stylesheet" href="../assets/css/components/searchbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/trackingModal.css" />
+    <link rel="stylesheet" href="../assets/css/components/clientModal.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/booking-details.css"
+    />
+    <link rel="stylesheet" href="./assets/css/components/progress.css" />
+    <link rel="stylesheet" href="./assets/css/report.css" />
+  </head>
+  <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="sidebar-top">
+          <img src="../assets/images/Logo.svg" alt="logo" />
+        </div>
+        <div
+          class="sidebar-mid"
+          data-name="Sidebar Items [Sidebar] [1.0]"
+          data-node-id="1878:13648"
+        >
+          <div class="sidebar-mid-top">
+            <h4>Main Menu</h4>
+            <a class="sidebar-item" href="./booking.html">
+              <img
+                src="../assets/icons/booking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Booking</span>
+            </a>
+            <a class="sidebar-item" href="./tracking.html">
+              <img
+                src="../assets/icons/tracking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Tracking</span>
+            </a>
+            <a class="sidebar-item" href="./savedAddresses.html">
+              <img
+                src="../assets/icons/save-address.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Saved address</span>
+            </a>
+          </div>
+          <div class="sidebar-mid-top">
+            <h4>Admin</h4>
+            <a class="sidebar-item" href="./clientManagement.html">
+              <img
+                src="../assets/icons/booking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Client management</span>
+            </a>
+            <a class="sidebar-item nav-effect" href="./clientManagement.html">
+              <img
+                src="../assets/icons/tracking-icon.svg"
+                alt=""
+                class="sidebar-item__icon"
+              />
+              <span class="txt-low-mid">Reports</span>
+            </a>
+          </div>
+          <div class="sidebar-mid-bottom">
+            <div class="carousel-wrapper">
+              <div class="carousel-slides">
+                <a href="#" class="sidebar-promo-card active">
+                  <img
+                    src="../assets/images/Promo Section.png"
+                    alt="Promo 1"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Landair.png"
+                    alt="Promo 2"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+                <a href="#" class="sidebar-promo-card">
+                  <img
+                    src="../assets/images/Zajelapp.png"
+                    alt="Promo 3"
+                    class="sidebar-item__icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-bottom">
+          <div
+            class="profile-card"
+            data-name="User Profile Card [Sidebar] [1.0]"
+            data-node-id="1878:13663"
+          >
+            <div class="profile-user">
+              <div class="profile-avatar" data-name="Avatar [1.0]">
+                <img
+                  src="../assets/417942d6127e1fbb599aef872e60492af4afa107.png"
+                  alt=""
+                />
+              </div>
+              <div class="profile-text">
+                <div class="profile-name-row">
+                  <span class="form-label">Arthur Taylor</span>
+                  <img
+                    class="profile-verified"
+                    src="../assets/e2950f05c4b6e0c4175c2455ef91f1f9ab2ac466.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="txt-small">arthur@zajelnow.com</span>
+              </div>
+            </div>
+            <button class="profile-compact-btn" aria-label="Open profile menu">
+              <img
+                src="../assets/cfea062004ae840ffe59aecffeb334c7024b18d7.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <header class="main-header">
+          <button
+            class="mobile-menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12H21M3 6H21M3 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="main-header-left">
+            <div class="back-btn-left remove">
+              <img src="./assets/icons/back.svg" />
+            </div>
+            <div class="nav-btn">
+              <img src="./assets/icons/notification-mobile.svg" />
+            </div>
+            <div>
+              <h2 class="txt-large">Reports</h2>
+              <span class="nav-txt-low txt-low-mid"
+                >Generate comprehensive reports for your shipments and account
+                activities. Select a report type, configure filters, and
+                download your report as PDF.</span
+              >
+            </div>
+          </div>
+          <button class="moon-line">
+            <img src="../assets/icons/moon-line.svg" alt="" />
+          </button>
+        </header>
+        <div class="main-content">
+          <section class="report-controls">
+            <div class="report-controls-container">
+              <div class="report-header">
+                <h3 class="report-title">Generate Account Summary</h3>
+                <p class="report-description">
+                  Select report type and date range to generate your account
+                  summary
+                </p>
+              </div>
+
+              <form class="report-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="reportType" class="form-label"
+                      >Report Type</label
+                    >
+                    <select
+                      id="reportType"
+                      name="reportType"
+                      class="form-select"
+                      required
+                    >
+                      <option value="">Select report type</option>
+                      <option value="monthly">Monthly Summary</option>
+                      <option value="quarterly">Quarterly Summary</option>
+                      <option value="yearly">Yearly Summary</option>
+                      <option value="custom">Custom Period</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="dateRange" class="form-label">Date Range</label>
+                    <div class="date-range-container">
+                      <input
+                        type="date"
+                        id="startDate"
+                        name="startDate"
+                        class="form-input date-input"
+                        required
+                      />
+                      <span class="date-separator">to</span>
+                      <input
+                        type="date"
+                        id="endDate"
+                        name="endDate"
+                        class="form-input date-input"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-generate">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2L2 7L12 12L22 7L12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2 17L12 22L22 17"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2 12L12 17L22 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Generate Account Summary
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="account-summary-report">
+            <div class="report-section-container">
+              <div class="report-section-header">
+                <h3 class="report-section-title">Account Summary Report</h3>
+                <p class="report-section-description">
+                  Provides a daily breakdown of total shipments for the selected
+                  period. Perfect for understanding shipment volume trends over
+                  time.
+                </p>
+              </div>
+
+              <div class="summary-cards-container">
+                <div class="summary-card">
+                  <div class="summary-card-header">
+                    <h4 class="summary-card-title">Daily Shipment Count</h4>
+                    <div class="summary-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 12L11 14L15 10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="summary-card-content">
+                    <div class="summary-metric">
+                      <span class="summary-number">247</span>
+                      <span class="summary-label">Shipments Today</span>
+                    </div>
+                    <div class="summary-trend">
+                      <span class="trend-indicator positive">+12%</span>
+                      <span class="trend-text">vs yesterday</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="summary-card">
+                  <div class="summary-card-header">
+                    <h4 class="summary-card-title">Date Range Summary</h4>
+                    <div class="summary-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="16"
+                          y1="2"
+                          x2="16"
+                          y2="6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="8"
+                          y1="2"
+                          x2="8"
+                          y2="6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="3"
+                          y1="10"
+                          x2="21"
+                          y2="10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="summary-card-content">
+                    <div class="summary-metric">
+                      <span class="summary-number">7,234</span>
+                      <span class="summary-label">Total Shipments</span>
+                    </div>
+                    <div class="summary-trend">
+                      <span class="trend-indicator positive">+8.5%</span>
+                      <span class="trend-text">vs last period</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="summary-card">
+                  <div class="summary-card-header">
+                    <h4 class="summary-card-title">Total Volume Overview</h4>
+                    <div class="summary-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 3V21H21"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 9L12 6L16 10L20 6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="summary-card-content">
+                    <div class="summary-metric">
+                      <span class="summary-number">15.2K</span>
+                      <span class="summary-label">Total Volume (kg)</span>
+                    </div>
+                    <div class="summary-trend">
+                      <span class="trend-indicator positive">+15.3%</span>
+                      <span class="trend-text">vs last period</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="kpis-report">
+            <div class="report-section-container">
+              <div class="report-section-header">
+                <h3 class="report-section-title">KPIs Report</h3>
+                <p class="report-section-description">
+                  Shows detailed Information about delivered shipments with
+                  performance metrics. Includes delivery status reconciliation
+                  from real-time tracking.
+                </p>
+              </div>
+
+              <div class="kpi-cards-container">
+                <div class="kpi-card">
+                  <div class="kpi-card-header">
+                    <h4 class="kpi-card-title">Delivered Shipments Only</h4>
+                    <div class="kpi-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 12L11 14L15 10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="kpi-card-content">
+                    <div class="kpi-metric">
+                      <span class="kpi-number">1,847</span>
+                      <span class="kpi-label">Delivered Shipments</span>
+                    </div>
+                    <div class="kpi-trend">
+                      <span class="trend-indicator positive">+18.2%</span>
+                      <span class="trend-text">vs last month</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-card-header">
+                    <h4 class="kpi-card-title">Real-time Status Updates</h4>
+                    <div class="kpi-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M12 6V12L16 14"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="kpi-card-content">
+                    <div class="kpi-metric">
+                      <span class="kpi-number">99.2%</span>
+                      <span class="kpi-label">Update Accuracy</span>
+                    </div>
+                    <div class="kpi-trend">
+                      <span class="trend-indicator positive">+2.1%</span>
+                      <span class="trend-text">vs last quarter</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-card-header">
+                    <h4 class="kpi-card-title">Performance Metrics</h4>
+                    <div class="kpi-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 3V21H21"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9 9L12 6L16 10L20 6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="kpi-card-content">
+                    <div class="kpi-metric">
+                      <span class="kpi-number">94.7%</span>
+                      <span class="kpi-label">On-time Delivery</span>
+                    </div>
+                    <div class="kpi-trend">
+                      <span class="trend-indicator positive">+5.3%</span>
+                      <span class="trend-text">vs last period</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="kpi-card">
+                  <div class="kpi-card-header">
+                    <h4 class="kpi-card-title">Delivery Timeline Data</h4>
+                    <div class="kpi-card-icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="16"
+                          y1="2"
+                          x2="16"
+                          y2="6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="8"
+                          y1="2"
+                          x2="8"
+                          y2="6"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <line
+                          x1="3"
+                          y1="10"
+                          x2="21"
+                          y2="10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="kpi-card-content">
+                    <div class="kpi-metric">
+                      <span class="kpi-number">2.3</span>
+                      <span class="kpi-label">Avg. Days to Delivery</span>
+                    </div>
+                    <div class="kpi-trend">
+                      <span class="trend-indicator negative">-0.8</span>
+                      <span class="trend-text">days improvement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/booking.js"></script>
+    <script src="./assets/js/clientModal.js"></script>
+    <script src="./assets/js/report.js"></script>
+  </body>
+</html>
