@@ -98,8 +98,12 @@
   }
 
   .create-user-btn {
-    padding: 6px 12px;
+    padding: 0 12px;
     font-size: 13px;
+    height: 40px; /* unify control height on mobile */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .create-user-btn span {
@@ -118,12 +122,66 @@
   }
 
   .view-toggle-btn {
-    width: 28px;
-    height: 28px;
+    width: 40px; /* unify control size on mobile */
+    height: 40px;
   }
 
   .create-user-btn {
-    padding: 6px 10px;
+    padding: 0 10px;
+  }
+}
+
+/* Ensure consistent (compact) heights for filter controls on mobile */
+@media (max-width: 1024px) {
+  .table-filter .search-input,
+  .table-sort,
+  .table-filter-mobile-btn,
+  .view-toggle-btn,
+  .create-user-btn {
+    height: 36px;
+    line-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Extra small phones: even more compact */
+@media (max-width: 640px) {
+  .table-filter .search-input,
+  .table-sort,
+  .table-filter-mobile-btn,
+  .view-toggle-btn,
+  .create-user-btn {
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+/* Two-row filter layout and spacing on mobile/tablet */
+@media (max-width: 1024px) {
+  .table-filter-container {
+    gap: 8px; /* space between the two rows */
+  }
+
+  .table-filter {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px; /* gaps between items in row 1 */
+    align-items: center;
+  }
+
+  .table-filter-right {
+    display: flex !important; /* override table.css hidden state */
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px; /* gaps between items in row 2 */
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Keep view toggle to the far right on the second row */
+  .view-toggle-container {
+    margin-left: auto;
   }
 }
 
@@ -430,6 +488,62 @@
   .action-btn svg {
     width: 14px;
     height: 14px;
+  }
+}
+
+/* ============================================ */
+/* Mobile header refinements for Client Users page */
+/* ============================================ */
+@media (max-width: 1024px) {
+  /* Keep title centered while placing icons at edges */
+  .main-header {
+    position: relative;
+    justify-content: center;
+  }
+
+  .main-header-left {
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* Show notification button on mobile for this page */
+  .main-header-left .nav-btn {
+    display: flex !important;
+  }
+
+  /* Place hamburger on the far left */
+  .mobile-menu-toggle {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Keep moon button visible on the far right */
+  .moon-line {
+    display: inline-flex !important;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide breadcrumb on small screens (already hidden globally, ensure override here) */
+  .nav-txt-low {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header .txt-large {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header .txt-large {
+    font-size: 14px;
   }
 }
 
