@@ -1533,6 +1533,80 @@
           </div>
         </div>
 
+        <!-- Change Password Modal -->
+        <div class="change-password-modal" id="changePasswordModal">
+          <div
+            class="change-password-modal-overlay"
+            id="changePasswordModalOverlay"
+          ></div>
+          <div class="change-password-modal-content">
+            <div class="change-password-modal-header">
+              <h2 class="change-password-modal-title">Change password</h2>
+              <button
+                class="change-password-modal-close"
+                id="changePasswordModalClose"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="change-password-modal-body">
+              <p class="change-password-modal-description">
+                Securely update your account password to keep your profile safe
+              </p>
+
+              <form class="change-password-form" id="changePasswordForm">
+                <div class="form-group">
+                  <label for="newPassword" class="form-label"
+                    >New password</label
+                  >
+                  <input
+                    type="password"
+                    id="newPassword"
+                    name="newPassword"
+                    class="form-input"
+                    placeholder="************"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword" class="form-label"
+                    >Confirm new password</label
+                  >
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    class="form-input"
+                    placeholder="************"
+                    required
+                  />
+                </div>
+
+                <div class="change-password-modal-actions">
+                  <button
+                    type="button"
+                    class="btn cancel-btn"
+                    id="changePasswordCancel"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn change-btn">Change</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <!-- Tracking Modal -->
         <div class="tracking-modal" id="trackingModal">
           <div class="tracking-modal-overlay" id="trackingModalOverlay"></div>
@@ -1668,5 +1742,6 @@
     <script src="./assets/js/booking.js"></script>
     <script src="./assets/js/clientModal.js"></script>
     <script src="./assets/js/viewToggle.js"></script>
+    <script src="./assets/js/changePasswordModal.js"></script>
   </body>
 </html>
